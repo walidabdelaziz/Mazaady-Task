@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		CBC05ED32D929DBD00386F14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC05EB42D929DBB00386F14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC05EBB2D929DBB00386F14;
+			remoteInfo = Mazaady;
+		};
+		CBC05EDD2D929DBD00386F14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC05EB42D929DBB00386F14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC05EBB2D929DBB00386F14;
+			remoteInfo = Mazaady;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CBC05EE42D929DBD00386F14 /* Exceptions for "Mazaady" folder in "Mazaady" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CBC05EBB2D929DBB00386F14 /* Mazaady */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CBC05EBE2D929DBB00386F14 /* Mazaady */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CBC05EE42D929DBD00386F14 /* Exceptions for "Mazaady" folder in "Mazaady" target */,
+			);
+			path = Mazaady;
+			sourceTree = "<group>";
+		};
+		CBC05ED52D929DBD00386F14 /* MazaadyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MazaadyTests;
+			sourceTree = "<group>";
+		};
+		CBC05EDF2D929DBD00386F14 /* MazaadyUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MazaadyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC05EB92D929DBB00386F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05ECF2D929DBD00386F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05ED92D929DBD00386F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBC05EB32D929DBB00386F14 = {
+			isa = PBXGroup;
+			children = (
+				CBC05EBE2D929DBB00386F14 /* Mazaady */,
+				CBC05ED52D929DBD00386F14 /* MazaadyTests */,
+				CBC05EDF2D929DBD00386F14 /* MazaadyUITests */,
+				CBC05EBD2D929DBB00386F14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC05EBD2D929DBB00386F14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05EBC2D929DBB00386F14 /* Mazaady.app */,
+				CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */,
+				CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBC05EBB2D929DBB00386F14 /* Mazaady */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC05EE52D929DBD00386F14 /* Build configuration list for PBXNativeTarget "Mazaady" */;
+			buildPhases = (
+				CBC05EB82D929DBB00386F14 /* Sources */,
+				CBC05EB92D929DBB00386F14 /* Frameworks */,
+				CBC05EBA2D929DBB00386F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CBC05EBE2D929DBB00386F14 /* Mazaady */,
+			);
+			name = Mazaady;
+			packageProductDependencies = (
+			);
+			productName = Mazaady;
+			productReference = CBC05EBC2D929DBB00386F14 /* Mazaady.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBC05ED12D929DBD00386F14 /* MazaadyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC05EEA2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyTests" */;
+			buildPhases = (
+				CBC05ECE2D929DBD00386F14 /* Sources */,
+				CBC05ECF2D929DBD00386F14 /* Frameworks */,
+				CBC05ED02D929DBD00386F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC05ED42D929DBD00386F14 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBC05ED52D929DBD00386F14 /* MazaadyTests */,
+			);
+			name = MazaadyTests;
+			packageProductDependencies = (
+			);
+			productName = MazaadyTests;
+			productReference = CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBC05EDB2D929DBD00386F14 /* MazaadyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC05EED2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyUITests" */;
+			buildPhases = (
+				CBC05ED82D929DBD00386F14 /* Sources */,
+				CBC05ED92D929DBD00386F14 /* Frameworks */,
+				CBC05EDA2D929DBD00386F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC05EDE2D929DBD00386F14 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CBC05EDF2D929DBD00386F14 /* MazaadyUITests */,
+			);
+			name = MazaadyUITests;
+			packageProductDependencies = (
+			);
+			productName = MazaadyUITests;
+			productReference = CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC05EB42D929DBB00386F14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					CBC05EBB2D929DBB00386F14 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					CBC05ED12D929DBD00386F14 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CBC05EBB2D929DBB00386F14;
+					};
+					CBC05EDB2D929DBD00386F14 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CBC05EBB2D929DBB00386F14;
+					};
+				};
+			};
+			buildConfigurationList = CBC05EB72D929DBB00386F14 /* Build configuration list for PBXProject "Mazaady" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBC05EB32D929DBB00386F14;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CBC05EBD2D929DBB00386F14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC05EBB2D929DBB00386F14 /* Mazaady */,
+				CBC05ED12D929DBD00386F14 /* MazaadyTests */,
+				CBC05EDB2D929DBD00386F14 /* MazaadyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC05EBA2D929DBB00386F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05ED02D929DBD00386F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05EDA2D929DBD00386F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC05EB82D929DBB00386F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05ECE2D929DBD00386F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC05ED82D929DBD00386F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBC05ED42D929DBD00386F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC05EBB2D929DBB00386F14 /* Mazaady */;
+			targetProxy = CBC05ED32D929DBD00386F14 /* PBXContainerItemProxy */;
+		};
+		CBC05EDE2D929DBD00386F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC05EBB2D929DBB00386F14 /* Mazaady */;
+			targetProxy = CBC05EDD2D929DBD00386F14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBC05EE62D929DBD00386F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mazaady/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.Mazaady;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBC05EE72D929DBD00386F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mazaady/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.Mazaady;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBC05EE82D929DBD00386F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBC05EE92D929DBD00386F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBC05EEB2D929DBD00386F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.MazaadyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mazaady.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mazaady";
+			};
+			name = Debug;
+		};
+		CBC05EEC2D929DBD00386F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.MazaadyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mazaady.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mazaady";
+			};
+			name = Release;
+		};
+		CBC05EEE2D929DBD00386F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.MazaadyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mazaady;
+			};
+			name = Debug;
+		};
+		CBC05EEF2D929DBD00386F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24239CYBDQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mazaady.app.MazaadyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mazaady;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC05EB72D929DBB00386F14 /* Build configuration list for PBXProject "Mazaady" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC05EE82D929DBD00386F14 /* Debug */,
+				CBC05EE92D929DBD00386F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC05EE52D929DBD00386F14 /* Build configuration list for PBXNativeTarget "Mazaady" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC05EE62D929DBD00386F14 /* Debug */,
+				CBC05EE72D929DBD00386F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC05EEA2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC05EEB2D929DBD00386F14 /* Debug */,
+				CBC05EEC2D929DBD00386F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC05EED2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC05EEE2D929DBD00386F14 /* Debug */,
+				CBC05EEF2D929DBD00386F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC05EB42D929DBB00386F14 /* Project object */;
+}
