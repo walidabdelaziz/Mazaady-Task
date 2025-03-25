@@ -11,6 +11,8 @@ target 'Mazaady' do
   pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'FSPagerView'
+  pod 'AdvancedPageControl'
   pod 'ReachabilitySwift'
 
   target 'MazaadyTests' do
@@ -21,6 +23,8 @@ target 'Mazaady' do
   pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'FSPagerView'
+  pod 'AdvancedPageControl'
   pod 'ReachabilitySwift'
   end
 
