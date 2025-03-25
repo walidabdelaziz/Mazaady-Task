@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		579BD20BA54AE4B17AE08BC9 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */; };
+		A7465DF02594CCD12D4EB5CE /* Pods_Mazaady_MazaadyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
 		CBC05EFB2D929DD600386F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF72D929DD600386F14 /* SceneDelegate.swift */; };
 		CBC05EFC2D929DD600386F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF82D929DD600386F14 /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 		CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F012D929DF000386F14 /* MazaadyTests.swift */; };
 		CBC05F072D929DF400386F14 /* MazaadyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F042D929DF400386F14 /* MazaadyUITests.swift */; };
 		CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */; };
+		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3A4F1E0C2C2EBFEB4E30A7 /* Pods-Mazaady-MazaadyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady-MazaadyUITests.release.xcconfig"; path = "Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MazaadyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC47D744837E0BF3141B9C3 /* Pods-Mazaady.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.release.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.release.xcconfig"; sourceTree = "<group>"; };
+		4D402B0C8EE78666C3B67724 /* Pods-MazaadyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazaadyTests.debug.xcconfig"; path = "Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E70A7B4FEEA550A2FE99D29 /* Pods-MazaadyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazaadyTests.release.xcconfig"; path = "Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests.release.xcconfig"; sourceTree = "<group>"; };
+		51ABD5900B28113FBC47FC88 /* Pods-Mazaady-MazaadyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady-MazaadyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +59,8 @@
 		CBC05F012D929DF000386F14 /* MazaadyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyTests.swift; sourceTree = "<group>"; };
 		CBC05F042D929DF400386F14 /* MazaadyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITests.swift; sourceTree = "<group>"; };
 		CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579BD20BA54AE4B17AE08BC9 /* Pods_Mazaady.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7465DF02594CCD12D4EB5CE /* Pods_Mazaady_MazaadyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				CBC05F022D929DF000386F14 /* MazaadyTests */,
 				CBC05F062D929DF400386F14 /* MazaadyUITests */,
 				CBC05EBD2D929DBB00386F14 /* Products */,
+				F01A2B03521AFC64D6C80C92 /* Pods */,
+				D1DB420A43FB3006E89D0A91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,30 @@
 			path = MazaadyUITests;
 			sourceTree = "<group>";
 		};
+		D1DB420A43FB3006E89D0A91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */,
+				DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */,
+				15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F01A2B03521AFC64D6C80C92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */,
+				3AC47D744837E0BF3141B9C3 /* Pods-Mazaady.release.xcconfig */,
+				51ABD5900B28113FBC47FC88 /* Pods-Mazaady-MazaadyUITests.debug.xcconfig */,
+				0B3A4F1E0C2C2EBFEB4E30A7 /* Pods-Mazaady-MazaadyUITests.release.xcconfig */,
+				4D402B0C8EE78666C3B67724 /* Pods-MazaadyTests.debug.xcconfig */,
+				4E70A7B4FEEA550A2FE99D29 /* Pods-MazaadyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,17 +175,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBC05EE52D929DBD00386F14 /* Build configuration list for PBXNativeTarget "Mazaady" */;
 			buildPhases = (
+				1C8808EC3898ABBCAFEAA7AD /* [CP] Check Pods Manifest.lock */,
 				CBC05EB82D929DBB00386F14 /* Sources */,
 				CBC05EB92D929DBB00386F14 /* Frameworks */,
 				CBC05EBA2D929DBB00386F14 /* Resources */,
+				4FBE05DA280148C9AA055462 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Mazaady;
-			packageProductDependencies = (
-			);
 			productName = Mazaady;
 			productReference = CBC05EBC2D929DBB00386F14 /* Mazaady.app */;
 			productType = "com.apple.product-type.application";
@@ -153,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBC05EEA2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyTests" */;
 			buildPhases = (
+				5F73DB0700A4FC722BEA0D13 /* [CP] Check Pods Manifest.lock */,
 				CBC05ECE2D929DBD00386F14 /* Sources */,
 				CBC05ECF2D929DBD00386F14 /* Frameworks */,
 				CBC05ED02D929DBD00386F14 /* Resources */,
+				2312F22654D3E3AF928011CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,8 +206,6 @@
 				CBC05ED42D929DBD00386F14 /* PBXTargetDependency */,
 			);
 			name = MazaadyTests;
-			packageProductDependencies = (
-			);
 			productName = MazaadyTests;
 			productReference = CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -173,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBC05EED2D929DBD00386F14 /* Build configuration list for PBXNativeTarget "MazaadyUITests" */;
 			buildPhases = (
+				FE09E40E3E6312B6498A745F /* [CP] Check Pods Manifest.lock */,
 				CBC05ED82D929DBD00386F14 /* Sources */,
 				CBC05ED92D929DBD00386F14 /* Frameworks */,
 				CBC05EDA2D929DBD00386F14 /* Resources */,
+				67EC0F2F5470473279E2B23E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,8 +226,6 @@
 				CBC05EDE2D929DBD00386F14 /* PBXTargetDependency */,
 			);
 			name = MazaadyUITests;
-			packageProductDependencies = (
-			);
 			productName = MazaadyUITests;
 			productReference = CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -220,8 +261,6 @@
 				Base,
 			);
 			mainGroup = CBC05EB32D929DBB00386F14;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = CBC05EBD2D929DBB00386F14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +298,126 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C8808EC3898ABBCAFEAA7AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mazaady-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2312F22654D3E3AF928011CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FBE05DA280148C9AA055462 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F73DB0700A4FC722BEA0D13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MazaadyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67EC0F2F5470473279E2B23E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE09E40E3E6312B6498A745F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mazaady-MazaadyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBC05EB82D929DBB00386F14 /* Sources */ = {
@@ -325,6 +484,7 @@
 /* Begin XCBuildConfiguration section */
 		CBC05EE62D929DBD00386F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,6 +513,7 @@
 		};
 		CBC05EE72D929DBD00386F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC47D744837E0BF3141B9C3 /* Pods-Mazaady.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -500,6 +661,7 @@
 		};
 		CBC05EEB2D929DBD00386F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D402B0C8EE78666C3B67724 /* Pods-MazaadyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +681,7 @@
 		};
 		CBC05EEC2D929DBD00386F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E70A7B4FEEA550A2FE99D29 /* Pods-MazaadyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +701,7 @@
 		};
 		CBC05EEE2D929DBD00386F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51ABD5900B28113FBC47FC88 /* Pods-Mazaady-MazaadyUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -555,6 +719,7 @@
 		};
 		CBC05EEF2D929DBD00386F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B3A4F1E0C2C2EBFEB4E30A7 /* Pods-Mazaady-MazaadyUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
