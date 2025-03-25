@@ -10,14 +10,14 @@
 		579BD20BA54AE4B17AE08BC9 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */; };
 		A7465DF02594CCD12D4EB5CE /* Pods_Mazaady_MazaadyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
-		CBC05EFB2D929DD600386F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF72D929DD600386F14 /* SceneDelegate.swift */; };
-		CBC05EFC2D929DD600386F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF82D929DD600386F14 /* ViewController.swift */; };
 		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
 		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
 		CBC05F002D929DD600386F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF62D929DD600386F14 /* Main.storyboard */; };
 		CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F012D929DF000386F14 /* MazaadyTests.swift */; };
 		CBC05F072D929DF400386F14 /* MazaadyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F042D929DF400386F14 /* MazaadyUITests.swift */; };
 		CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */; };
+		CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F092D92A54800386F14 /* SplashVC.swift */; };
+		CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F0E2D92A71600386F14 /* Extensions.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +54,11 @@
 		CBC05EF22D929DD600386F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC05EF32D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC05EF52D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBC05EF72D929DD600386F14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBC05EF82D929DD600386F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBC05F012D929DF000386F14 /* MazaadyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyTests.swift; sourceTree = "<group>"; };
 		CBC05F042D929DF400386F14 /* MazaadyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITests.swift; sourceTree = "<group>"; };
 		CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBC05F092D92A54800386F14 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		CBC05F0E2D92A71600386F14 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				CBC05EF02D929DD600386F14 /* AppDelegate.swift */,
+				CBC05F102D92A7A100386F14 /* Helpers */,
+				CBC05F0B2D92A56C00386F14 /* Controllers */,
+				CBC05F0D2D92A5B100386F14 /* Storyboards */,
+				CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */,
 				CBC05EF12D929DD600386F14 /* Assets.xcassets */,
 				CBC05EF22D929DD600386F14 /* Info.plist */,
-				CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */,
-				CBC05EF62D929DD600386F14 /* Main.storyboard */,
-				CBC05EF72D929DD600386F14 /* SceneDelegate.swift */,
-				CBC05EF82D929DD600386F14 /* ViewController.swift */,
 			);
 			path = Mazaady;
 			sourceTree = "<group>";
@@ -142,6 +142,38 @@
 				CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */,
 			);
 			path = MazaadyUITests;
+			sourceTree = "<group>";
+		};
+		CBC05F0B2D92A56C00386F14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F0C2D92A5A000386F14 /* Splash */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CBC05F0C2D92A5A000386F14 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F092D92A54800386F14 /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		CBC05F0D2D92A5B100386F14 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05EF62D929DD600386F14 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CBC05F102D92A7A100386F14 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F0E2D92A71600386F14 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D1DB420A43FB3006E89D0A91 /* Frameworks */ = {
@@ -164,7 +196,6 @@
 				4D402B0C8EE78666C3B67724 /* Pods-MazaadyTests.debug.xcconfig */,
 				4E70A7B4FEEA550A2FE99D29 /* Pods-MazaadyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -254,6 +285,7 @@
 				};
 			};
 			buildConfigurationList = CBC05EB72D929DBB00386F14 /* Build configuration list for PBXProject "Mazaady" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -424,9 +456,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
-				CBC05EFB2D929DD600386F14 /* SceneDelegate.swift in Sources */,
-				CBC05EFC2D929DD600386F14 /* ViewController.swift in Sources */,
+				CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
