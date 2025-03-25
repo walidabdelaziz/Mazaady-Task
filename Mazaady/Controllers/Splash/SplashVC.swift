@@ -33,9 +33,9 @@ class SplashVC: UIViewController {
         }
     }
     @objc func showVC(){
-//        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-//        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-//        navigationController?.pushViewController(LoginVC, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainVC = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        navigationController?.pushViewController(MainVC, animated: true)
     }
 }
         

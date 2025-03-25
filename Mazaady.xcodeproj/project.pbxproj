@@ -18,6 +18,8 @@
 		CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */; };
 		CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F092D92A54800386F14 /* SplashVC.swift */; };
 		CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F0E2D92A71600386F14 /* Extensions.swift */; };
+		CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F112D92AB8800386F14 /* TabBarController.swift */; };
+		CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F142D92B1D500386F14 /* CustomTabBar.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBC05F092D92A54800386F14 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		CBC05F0E2D92A71600386F14 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CBC05F112D92AB8800386F14 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CBC05F142D92B1D500386F14 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC05F0C2D92A5A000386F14 /* Splash */,
+				CBC05F132D92AB9300386F14 /* TabBar */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,8 +177,17 @@
 			isa = PBXGroup;
 			children = (
 				CBC05F0E2D92A71600386F14 /* Extensions.swift */,
+				CBC05F142D92B1D500386F14 /* CustomTabBar.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CBC05F132D92AB9300386F14 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F112D92AB8800386F14 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		D1DB420A43FB3006E89D0A91 /* Frameworks */ = {
@@ -457,6 +471,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
+				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,
+				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
 				CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */,
 			);
