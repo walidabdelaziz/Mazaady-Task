@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LivesCell" id="gTV-IL-0wX" customClass="LivesCell" customModule="Mazaady" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="225"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="265" height="225"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2t3-gO-nwm">
+                        <rect key="frame" x="4" y="4" width="253" height="217"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-v5-BWb">
+                                <rect key="frame" x="6" y="6" width="241" height="205"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ieh-v5-BWb" firstAttribute="top" secondItem="2t3-gO-nwm" secondAttribute="top" constant="6" id="MNV-xt-KE5"/>
+                            <constraint firstAttribute="trailing" secondItem="ieh-v5-BWb" secondAttribute="trailing" constant="6" id="fsW-Nc-pkB"/>
+                            <constraint firstAttribute="bottom" secondItem="ieh-v5-BWb" secondAttribute="bottom" constant="6" id="krx-8F-Sez"/>
+                            <constraint firstItem="ieh-v5-BWb" firstAttribute="leading" secondItem="2t3-gO-nwm" secondAttribute="leading" constant="6" id="rjY-cf-I2g"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Live Circle" translatesAutoresizingMaskIntoConstraints="NO" id="Hab-sd-o72">
+                        <rect key="frame" x="233" y="199" width="26" height="26"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2t3-gO-nwm" secondAttribute="bottom" constant="4" id="CZZ-Md-QTn"/>
+                <constraint firstAttribute="bottom" secondItem="Hab-sd-o72" secondAttribute="bottom" id="LmD-ky-x53"/>
+                <constraint firstAttribute="trailing" secondItem="Hab-sd-o72" secondAttribute="trailing" constant="6" id="Oxr-CJ-aAC"/>
+                <constraint firstItem="2t3-gO-nwm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="UnY-Iq-h6p"/>
+                <constraint firstAttribute="trailing" secondItem="2t3-gO-nwm" secondAttribute="trailing" constant="8" id="fcI-Cs-ca8"/>
+                <constraint firstItem="2t3-gO-nwm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="rrr-rv-jB3"/>
+            </constraints>
+            <size key="customSize" width="265" height="225"/>
+            <connections>
+                <outlet property="bgV" destination="2t3-gO-nwm" id="opT-cH-Zu7"/>
+                <outlet property="profileImg" destination="ieh-v5-BWb" id="tLx-YR-qWl"/>
+            </connections>
+            <point key="canvasLocation" x="48.091603053435115" y="81.338028169014095"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Live Circle" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
