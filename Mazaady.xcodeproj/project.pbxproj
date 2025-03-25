@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
+		CBC05EFB2D929DD600386F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF72D929DD600386F14 /* SceneDelegate.swift */; };
+		CBC05EFC2D929DD600386F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF82D929DD600386F14 /* ViewController.swift */; };
+		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
+		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
+		CBC05F002D929DD600386F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF62D929DD600386F14 /* Main.storyboard */; };
+		CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F012D929DF000386F14 /* MazaadyTests.swift */; };
+		CBC05F072D929DF400386F14 /* MazaadyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F042D929DF400386F14 /* MazaadyUITests.swift */; };
+		CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CBC05ED32D929DBD00386F14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +39,17 @@
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC05EF02D929DD600386F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBC05EF12D929DD600386F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC05EF22D929DD600386F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC05EF32D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBC05EF52D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBC05EF72D929DD600386F14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CBC05EF82D929DD600386F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBC05F012D929DF000386F14 /* MazaadyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyTests.swift; sourceTree = "<group>"; };
+		CBC05F042D929DF400386F14 /* MazaadyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITests.swift; sourceTree = "<group>"; };
+		CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CBC05EE42D929DBD00386F14 /* Exceptions for "Mazaady" folder in "Mazaady" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = CBC05EBB2D929DBB00386F14 /* Mazaady */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CBC05EBE2D929DBB00386F14 /* Mazaady */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CBC05EE42D929DBD00386F14 /* Exceptions for "Mazaady" folder in "Mazaady" target */,
-			);
-			path = Mazaady;
-			sourceTree = "<group>";
-		};
-		CBC05ED52D929DBD00386F14 /* MazaadyTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MazaadyTests;
-			sourceTree = "<group>";
-		};
-		CBC05EDF2D929DBD00386F14 /* MazaadyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MazaadyUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CBC05EB92D929DBB00386F14 /* Frameworks */ = {
@@ -88,9 +79,9 @@
 		CBC05EB32D929DBB00386F14 = {
 			isa = PBXGroup;
 			children = (
-				CBC05EBE2D929DBB00386F14 /* Mazaady */,
-				CBC05ED52D929DBD00386F14 /* MazaadyTests */,
-				CBC05EDF2D929DBD00386F14 /* MazaadyUITests */,
+				CBC05EF92D929DD600386F14 /* Mazaady */,
+				CBC05F022D929DF000386F14 /* MazaadyTests */,
+				CBC05F062D929DF400386F14 /* MazaadyUITests */,
 				CBC05EBD2D929DBB00386F14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +94,37 @@
 				CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC05EF92D929DD600386F14 /* Mazaady */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05EF02D929DD600386F14 /* AppDelegate.swift */,
+				CBC05EF12D929DD600386F14 /* Assets.xcassets */,
+				CBC05EF22D929DD600386F14 /* Info.plist */,
+				CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */,
+				CBC05EF62D929DD600386F14 /* Main.storyboard */,
+				CBC05EF72D929DD600386F14 /* SceneDelegate.swift */,
+				CBC05EF82D929DD600386F14 /* ViewController.swift */,
+			);
+			path = Mazaady;
+			sourceTree = "<group>";
+		};
+		CBC05F022D929DF000386F14 /* MazaadyTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F012D929DF000386F14 /* MazaadyTests.swift */,
+			);
+			path = MazaadyTests;
+			sourceTree = "<group>";
+		};
+		CBC05F062D929DF400386F14 /* MazaadyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F042D929DF400386F14 /* MazaadyUITests.swift */,
+				CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */,
+			);
+			path = MazaadyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CBC05EBE2D929DBB00386F14 /* Mazaady */,
 			);
 			name = Mazaady;
 			packageProductDependencies = (
@@ -143,9 +162,6 @@
 			dependencies = (
 				CBC05ED42D929DBD00386F14 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CBC05ED52D929DBD00386F14 /* MazaadyTests */,
-			);
 			name = MazaadyTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +181,6 @@
 			);
 			dependencies = (
 				CBC05EDE2D929DBD00386F14 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CBC05EDF2D929DBD00386F14 /* MazaadyUITests */,
 			);
 			name = MazaadyUITests;
 			packageProductDependencies = (
@@ -225,6 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */,
+				CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */,
+				CBC05F002D929DD600386F14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
+				CBC05EFB2D929DD600386F14 /* SceneDelegate.swift in Sources */,
+				CBC05EFC2D929DD600386F14 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05F072D929DF400386F14 /* MazaadyUITests.swift in Sources */,
+				CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +302,25 @@
 			targetProxy = CBC05EDD2D929DBD00386F14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC05EF32D929DD600386F14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CBC05EF62D929DD600386F14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC05EF52D929DD600386F14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBC05EE62D929DBD00386F14 /* Debug */ = {
