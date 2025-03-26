@@ -12,10 +12,10 @@ class CategoriesCell: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var bgV: UIView!
     
-    var category: String? {
+    var category: Category? {
         didSet {
             guard let category = category else { return }
-            titleLbl.text = category
+            titleLbl.text = category.name
         }
     }
     

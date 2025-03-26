@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-Sa-naJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="353"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="683.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-Md-B5C">
                                                 <rect key="frame" x="16" y="16" width="361" height="43"/>
@@ -151,11 +151,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5oP-FE-Le0">
-                                                <rect key="frame" x="0.0" y="208" width="393" height="45"/>
+                                                <rect key="frame" x="0.0" y="208" width="393" height="45.333333333333343"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="4jY-WP-5LN"/>
-                                                </constraints>
                                                 <inset key="scrollIndicatorInsets" minX="14" minY="0.0" maxX="0.0" maxY="14"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ve9-pt-wWN">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -165,11 +162,35 @@
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Lu-bbv" customClass="FSPagerView" customModule="FSPagerView">
+                                                <rect key="frame" x="0.0" y="277.33333333333331" width="393" height="369.99999999999994"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="370" id="IyP-Cb-NLb"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-dY-J7O" customClass="AdvancedPageControlView" customModule="AdvancedPageControl">
+                                                <rect key="frame" x="16" y="651.33333333333337" width="361" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="zHn-b5-jSt"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="QF5-Lz-bVr" secondAttribute="trailing" constant="16" id="3Wg-wR-jAP"/>
+                                            <constraint firstAttribute="bottom" secondItem="iV4-dY-J7O" secondAttribute="bottom" constant="12" id="6fE-JE-Nuo"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="ACn-Aa-pxJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="26H-Lu-bbv" secondAttribute="trailing" id="FlU-b7-mMH"/>
+                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="centerX" secondItem="26H-Lu-bbv" secondAttribute="centerX" id="GhH-pz-oPW"/>
+                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="I1a-dD-BTr"/>
+                                            <constraint firstAttribute="trailing" secondItem="iV4-dY-J7O" secondAttribute="trailing" constant="16" id="KE5-MO-B3K"/>
                                             <constraint firstAttribute="trailing" secondItem="GWr-Md-B5C" secondAttribute="trailing" constant="16" id="LLb-fb-Pse"/>
                                             <constraint firstItem="5oP-FE-Le0" firstAttribute="top" secondItem="QF5-Lz-bVr" secondAttribute="bottom" constant="16" id="My9-yp-JZd"/>
                                             <constraint firstAttribute="trailing" secondItem="zpH-b2-7uy" secondAttribute="trailing" id="Oiu-2R-7Ge"/>
@@ -178,8 +199,10 @@
                                             <constraint firstItem="zpH-b2-7uy" firstAttribute="top" secondItem="GWr-Md-B5C" secondAttribute="bottom" constant="16" id="e4s-gH-vAm"/>
                                             <constraint firstItem="5oP-FE-Le0" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="jW5-tD-rjE"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="top" secondItem="Pdb-Sa-naJ" secondAttribute="top" constant="16" id="lXd-Qb-o4w"/>
+                                            <constraint firstItem="26H-Lu-bbv" firstAttribute="top" secondItem="5oP-FE-Le0" secondAttribute="bottom" constant="24" id="nHg-FS-xh1"/>
+                                            <constraint firstItem="26H-Lu-bbv" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="nI6-B9-Kj3"/>
+                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="top" secondItem="26H-Lu-bbv" secondAttribute="bottom" constant="4" id="p4Z-cj-tW2"/>
                                             <constraint firstItem="zpH-b2-7uy" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="uTm-Vk-EpS"/>
-                                            <constraint firstAttribute="bottom" secondItem="5oP-FE-Le0" secondAttribute="bottom" constant="100" id="yYR-Gg-vRj"/>
                                             <constraint firstAttribute="trailing" secondItem="5oP-FE-Le0" secondAttribute="trailing" id="zYw-Rp-ja7"/>
                                         </constraints>
                                     </view>
@@ -200,6 +223,7 @@
                             <constraint firstAttribute="bottom" secondItem="LMa-wZ-ckt" secondAttribute="bottom" id="Lb8-Q8-cRR"/>
                             <constraint firstItem="zpH-b2-7uy" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.094" id="O9h-lv-XzK"/>
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="leading" secondItem="CIb-tU-VeV" secondAttribute="leading" id="Q8T-LM-rTc"/>
+                            <constraint firstItem="5oP-FE-Le0" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.053" id="an6-Tn-ea7"/>
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="top" secondItem="CIb-tU-VeV" secondAttribute="top" id="h2R-ae-tX3"/>
                         </constraints>
                     </view>
@@ -207,7 +231,8 @@
                     <navigationItem key="navigationItem" id="h5S-aC-kqD"/>
                     <connections>
                         <outlet property="categoriesCV" destination="5oP-FE-Le0" id="Txv-V1-eBM"/>
-                        <outlet property="categoriesCVHeight" destination="4jY-WP-5LN" id="yT1-I3-Ac4"/>
+                        <outlet property="coursesPageControl" destination="iV4-dY-J7O" id="P2l-ky-myY"/>
+                        <outlet property="coursesPageViewer" destination="26H-Lu-bbv" id="ZyV-Cn-d6b"/>
                         <outlet property="headerImg" destination="zgo-dc-h8m" id="MJL-7c-b4a"/>
                         <outlet property="headerbgV" destination="GWr-Md-B5C" id="Mh4-ea-aOB"/>
                         <outlet property="livesCV" destination="zpH-b2-7uy" id="n9e-gA-kUo"/>
@@ -219,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5f-dS-bPS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="1511"/>
+            <point key="canvasLocation" x="336.64122137404581" y="1510.5633802816901"/>
         </scene>
         <!--Item-->
         <scene sceneID="7cz-Lw-eQr">

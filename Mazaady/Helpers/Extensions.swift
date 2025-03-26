@@ -38,6 +38,18 @@ extension UIColor {
     @nonobjc class var LightGreyColor: UIColor {
         return UIColor(hexString: "#F6F7FA")
     }
+    @nonobjc class var SoftYellow: UIColor {
+        return UIColor(hexString: "#FCCC75")
+    }
+    @nonobjc class var PurpleColor: UIColor {
+        return UIColor(hexString: "#8D5EF2")
+    }
+    @nonobjc class var TurquoiseColor: UIColor {
+        return UIColor(hexString: "#4DC9D1")
+    }
+    @nonobjc class var DeepBlue: UIColor {
+        return UIColor(hexString: "#0082CD") 
+    }
 }
 extension UIView {
     func dropShadow(radius: CGFloat, opacity: Float = 0.3, offset: CGSize = CGSize(width: 1.5, height: 3)) {

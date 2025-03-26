@@ -10,7 +10,7 @@ import RxCocoa
 
 class HomeViewModel {
     var liveAvatars = BehaviorRelay<[UIImage]>(value: [])
-    var categories = BehaviorRelay<[String]>(value: [])
+    var categories = BehaviorRelay<[Category]>(value: [])
     let selectedCategoryIndex = BehaviorRelay<Int>(value: 0)
 
     func addLiveAvatars(){
@@ -20,7 +20,59 @@ class HomeViewModel {
         let imageView4 = UIImage(named: "Avatar4") ?? UIImage()
         liveAvatars.accept([imageView1, imageView2, imageView3, imageView4])
     }
-    func addCategories(){
-        categories.accept(["All", "UI/UX", "Illustration", "3D Animation"])
+    func addCategories() {
+        let uiUxCourses = [
+            Course(
+                id: 1,
+                category: "UI/UX",
+                title: "Step design sprint for beginner",
+                duration: "5h 21m",
+                lessons: 6,
+                isFree: true,
+                imageUrl: "course1",
+                author: "Laurel Seilha",
+                authorRole: "Product Designer",
+                authorImageUrl: "author1"
+            )
+        ]
+        let illustrationCourses = [
+            Course(
+                id: 2,
+                category: "Illustration",
+                title: "Basic illustration techniques",
+                duration: "4h 10m",
+                lessons: 2,
+                isFree: false,
+                imageUrl: "course2",
+                author: "John Doe",
+                authorRole: "Illustrator",
+                authorImageUrl: "author2"
+            )
+        ]
+        let animationCourses: [Course] = []
+        let allCourses = uiUxCourses + illustrationCourses + animationCourses
+        let categoriesData: [Category] = [
+            Category(
+                id: 1,
+                name: "All",
+                courses: allCourses
+            ),
+            Category(
+                id: 2,
+                name: "UI/UX",
+                courses: uiUxCourses
+            ),
+            Category(
+                id: 3,
+                name: "Illustration",
+                courses: illustrationCourses
+            ),
+            Category(
+                id: 4,
+                name: "3D Animation",
+                courses: animationCourses
+            )
+        ]
+        categories.accept(categoriesData)
     }
 }

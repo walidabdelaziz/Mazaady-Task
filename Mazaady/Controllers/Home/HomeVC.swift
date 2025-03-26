@@ -9,13 +9,24 @@ import UIKit
 import Foundation
 import RxSwift
 import RxCocoa
+import FSPagerView
+import AdvancedPageControl
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
     
     let disposeBag = DisposeBag()
     let homeViewModel = HomeViewModel()
     
-    @IBOutlet weak var categoriesCVHeight: NSLayoutConstraint!
+    @IBOutlet weak var coursesPageViewer: FSPagerView!{
+        didSet {
+            coursesPageViewer.register(UINib(nibName: "CoursesCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+//            coursesPageViewer.interitemSpacing = 0
+            coursesPageViewer.transformer = FSPagerViewTransformer(type: .linear)
+            coursesPageViewer.interitemSpacing = 20
+            coursesPageViewer.itemSize = CGSize(width: 370, height: 370)
+        }
+    }
+    @IBOutlet weak var coursesPageControl: AdvancedPageControlView!
     @IBOutlet weak var categoriesCV: UICollectionView!
     @IBOutlet weak var upcomingCoursesLbl: UILabel!
     @IBOutlet weak var livesCV: UICollectionView!
@@ -34,6 +45,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     }
     func setupUI(){
         setCollectionViewsConfiguration()
+        setPageViewerConfiguration()
         pointsLbl.textColor = .SecondaryColor
         upcomingCoursesLbl.attributedText = NSAttributedString.styledText(
             mainText: "Upcoming",
@@ -61,6 +73,18 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             estimatedSize: true
         )
     }
+    func setPageViewerConfiguration(){
+        [coursesPageViewer].forEach{
+            $0?.delegate = self
+            $0?.dataSource = self
+        }
+    }
+    func setPageControlCount(){
+        let courses =  homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses
+        coursesPageControl.isHidden = courses.isEmpty ? true : false
+        coursesPageControl.numberOfPages = courses.count
+        coursesPageControl.drawer = ExtendedDotDrawer(numberOfPages: courses.count, height: 10, width: 10, space: 5,raduis: 10, currentItem: 0, indicatorColor: .PrimaryColor, dotsColor: UIColor.LightGreyColor,borderWidth: 0)
+    }
     func bindViewModel(){
         // bind live avatars
         homeViewModel.liveAvatars
@@ -82,12 +106,22 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
                 self.categoriesCV.reloadData()
+                self.coursesPageViewer.reloadData()
+                self.setPageControlCount()
+            })
+            .disposed(by: disposeBag)
+        
+        // Observe categories to update UI
+        homeViewModel.categories
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.setPageControlCount()
             })
             .disposed(by: disposeBag)
         
         // Handle category selection and scrolling
         Observable.zip(
-            categoriesCV.rx.modelSelected(String.self),
+            categoriesCV.rx.modelSelected(Category.self),
             categoriesCV.rx.itemSelected
         )
         .subscribe(onNext: { [weak self] category, indexPath in
@@ -108,3 +142,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         }
     }
 }
+extension HomeVC: FSPagerViewDataSource,FSPagerViewDelegate{
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index) as! CoursesCell
+        let course = homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses[index]
+        cell.course = course
+        return cell
+    }
+    func pagerViewDidScroll(_ pagerView: FSPagerView) {
+        coursesPageControl.setPage(pagerView.currentIndex)
+    }
+}
+
