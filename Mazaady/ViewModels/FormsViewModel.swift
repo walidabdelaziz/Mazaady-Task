@@ -60,8 +60,11 @@ class FormsViewModel {
             self.isLoading.accept(false)
             switch result {
             case .success(let response):
-                self.parentProperties.accept(response)
-                self.currentDataSource.accept(response)
+                let otherProperty = FormCategory(id: 0, name: "Other",type: "other")
+                var updatedResponse = response
+                updatedResponse.append(otherProperty)
+                self.parentProperties.accept(updatedResponse)
+                self.currentDataSource.accept(updatedResponse)
             case .failure(let error):
                 print("Error fetching categories: \(error)")
             }

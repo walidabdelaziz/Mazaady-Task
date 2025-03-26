@@ -15,6 +15,9 @@ class FormsVC: UIViewController {
     let disposeBag = DisposeBag()
     let formsViewModel = FormsViewModel()
     
+    @IBOutlet weak var inputLbl: UILabel!
+    @IBOutlet weak var inputTF: UITextField!
+    @IBOutlet weak var inputbgV: UIView!
     @IBOutlet weak var propertyArrow: UIImageView!
     @IBOutlet weak var propertyTF: UITextField!
     @IBOutlet weak var propertyLbl: UILabel!
@@ -33,14 +36,18 @@ class FormsVC: UIViewController {
         setupUI()
     }
     func setupUI(){
-        propertybgV.isHidden = true
+        [propertybgV, inputbgV].forEach {
+            $0.isHidden = true
+        }
         categoryLbl.text = "Category"
         subcategoryLbl.text = "SubCategory"
         propertyLbl.text = "Property"
+        inputLbl.text = "Property Note"
         categoryTF.placeholder = "Choose Category"
         subcategoryTF.placeholder = "Choose SubCategory"
         propertyTF.placeholder = "Choose Property"
-        [categoryTF,subcategoryTF,propertyTF].forEach {
+        inputTF.placeholder = "Write Property Note"
+        [categoryTF,subcategoryTF,propertyTF, inputTF].forEach {
             $0?.dropShadow(radius: 3, opacity: 0.08, offset: CGSize(width: 1, height: 1))
             $0?.layer.cornerRadius = 8
             $0?.paddingLeft(padding: 8)
@@ -65,21 +72,18 @@ class FormsVC: UIViewController {
         categoryArrow.rotateArrow()
     }
     private func resetSelection(resetSubCategory: Bool = false, resetProperty: Bool = false) {
-        if resetSubCategory {
-            subcategoryTF.text = ""
-            propertybgV.isHidden = true
-        }
-        if resetProperty {
-            propertyTF.text = ""
-        }
         var updatedData = formsViewModel.selectedData.value
         if resetSubCategory {
             subcategoryTF.text = ""
-            propertybgV.isHidden = true
+            [propertybgV, inputbgV].forEach {
+                $0.isHidden = true
+            }
             updatedData.selectedSubCategory = nil
         }
         if resetProperty {
-            propertyTF.text = ""
+            [propertyTF, inputTF].forEach {
+                $0.text = ""
+            }
             updatedData.selectedProperty = nil
         }
         formsViewModel.selectedData.accept(updatedData)
@@ -114,6 +118,7 @@ class FormsVC: UIViewController {
             propertyArrow.resetArrowRotation()
             if !selectedData.dismissVC_Without_Action {
                 self.propertyTF.text = selectedData.selectedProperty?.name
+                inputbgV.isHidden = selectedData.selectedProperty?.type != "other" ? true : false
             }
         } setDataHandler: { [weak self] selectedData in
             guard let self = self else { return }
