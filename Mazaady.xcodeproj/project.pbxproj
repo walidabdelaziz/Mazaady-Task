@@ -30,6 +30,7 @@
 		CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F282D93855400386F14 /* CoursesCell.swift */; };
 		CBC05F2B2D93855400386F14 /* CoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05F292D93855400386F14 /* CoursesCell.xib */; };
 		CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */; };
+		CBC05F912D9421C300386F14 /* FormsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F902D9421C300386F14 /* FormsVC.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		CBC05F282D93855400386F14 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
 		CBC05F292D93855400386F14 /* CoursesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCell.xib; sourceTree = "<group>"; };
 		CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
+		CBC05F902D9421C300386F14 /* FormsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsVC.swift; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 				CBC05F0C2D92A5A000386F14 /* Splash */,
 				CBC05F132D92AB9300386F14 /* TabBar */,
 				CBC05F182D92B59400386F14 /* Home */,
+				CBC05F922D9421CC00386F14 /* Forms */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,14 @@
 				CBC05F252D93805100386F14 /* Courses.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CBC05F922D9421CC00386F14 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F902D9421C300386F14 /* FormsVC.swift */,
+			);
+			path = Forms;
 			sourceTree = "<group>";
 		};
 		D1DB420A43FB3006E89D0A91 /* Frameworks */ = {
@@ -543,6 +554,7 @@
 				CBC05F1F2D92C0A900386F14 /* HomeViewModel.swift in Sources */,
 				CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */,
 				CBC05F172D92B58A00386F14 /* HomeVC.swift in Sources */,
+				CBC05F912D9421C300386F14 /* FormsVC.swift in Sources */,
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
 				CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */,
 				CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */,
