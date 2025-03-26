@@ -10,4 +10,5 @@ struct SelectedData: Codable {
     var selectedCategory: FormCategory?
     var selectedSubCategory: FormCategory?
     var selectedProperty: FormCategory?
+    var selectedOption: FormCategory?
 }

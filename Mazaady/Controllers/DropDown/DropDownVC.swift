@@ -63,6 +63,8 @@ class DropDownVC: UIViewController {
         case .property:
             formsViewModel.getProperties()
             setTitleAndPlaceholder(title: "Properties", placeholder: "Search Properties")
+        case .option:
+            setTitleAndPlaceholder(title: "Options", placeholder: "Search Options")
         default:
             break
         }
@@ -107,16 +109,16 @@ class DropDownVC: UIViewController {
             .bind(to: dataTV.rx.items(cellIdentifier: "DataTVCell", cellType: DataTVCell.self)) { [weak self] row, item, cell in
                 guard let self = self else { return }
                 cell.selectionStyle = .none
+                cell.item = item
                 switch self.type {
                 case .category:
-                    cell.item = item
                     cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedCategory, item: item)
                 case .subCategory:
-                    cell.item = item
                     cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedSubCategory, item: item)
                 case .property:
-                    cell.item = item
                     cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedProperty, item: item)
+                case .option:
+                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedOption, item: item)
                 default:
                     break
                 }
@@ -140,6 +142,9 @@ class DropDownVC: UIViewController {
                     updatedData.selectedSubCategory = selectedItem
                 case .property:
                     updatedData.selectedProperty = selectedItem
+                    self.formsViewModel.updateOptions()
+                case .option:
+                    updatedData.selectedOption = selectedItem
                 default:
                     break
                 }
@@ -155,7 +160,7 @@ class DropDownVC: UIViewController {
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] query in
                 guard let self = self else { return }
-
+                
                 if query.isEmpty {
                     switch self.type {
                     case .category:
@@ -166,6 +171,8 @@ class DropDownVC: UIViewController {
                         })
                     case .property:
                         self.formsViewModel.currentDataSource.accept(self.formsViewModel.parentProperties.value)
+                    case .option:
+                        self.formsViewModel.currentDataSource.accept(self.formsViewModel.selectedData.value.selectedProperty?.options ?? [])
                     default:
                         break
                     }
@@ -180,10 +187,11 @@ class DropDownVC: UIViewController {
                         }
                     case .property:
                         source = self.formsViewModel.parentProperties.value
+                    case .option:
+                        source = self.formsViewModel.selectedData.value.selectedProperty?.options ?? []
                     default:
                         source = []
                     }
-
                     let filteredResults = source.filter {
                         $0.name?.lowercased().contains(query.lowercased()) ?? false
                     }
@@ -191,5 +199,6 @@ class DropDownVC: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+    
     }
 }

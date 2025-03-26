@@ -20,7 +20,6 @@ class FormsViewModel {
     var selectedData = BehaviorRelay<SelectedData>(value: SelectedData())
     var parentProperties = BehaviorRelay<[FormCategory]>(value: [])
 
-
     func getCategories() {
         isLoading.accept(true)
         FormsService().getCategories(completion: { [weak self] result in
@@ -33,6 +32,23 @@ class FormsViewModel {
                 self.originalDataSource.accept(parents)
                 self.currentDataSource.accept(parents)
                 self.subCategories.accept(subs)
+            case .failure(let error):
+                print("Error fetching categories: \(error)")
+            }
+        })
+    }
+    func getProperties() {
+        isLoading.accept(true)
+        FormsService().getProperties(categoryId: selectedData.value.selectedSubCategory?.id ?? 0, completion: { [weak self] result in
+            guard let self = self else { return }
+            self.isLoading.accept(false)
+            switch result {
+            case .success(let response):
+                let otherProperty = FormCategory(id: 0, name: "Other",type: "other")
+                var updatedResponse = response
+                updatedResponse.append(otherProperty)
+                self.parentProperties.accept(updatedResponse)
+                self.currentDataSource.accept(updatedResponse)
             case .failure(let error):
                 print("Error fetching categories: \(error)")
             }
@@ -53,21 +69,9 @@ class FormsViewModel {
         let filteredSubCategories = subCategories.value.filter { $0.parentID == selectedCategory.id }
         currentDataSource.accept(filteredSubCategories)
     }
-    func getProperties() {
-        isLoading.accept(true)
-        FormsService().getProperties(categoryId: selectedData.value.selectedSubCategory?.id ?? 0, completion: { [weak self] result in
-            guard let self = self else { return }
-            self.isLoading.accept(false)
-            switch result {
-            case .success(let response):
-                let otherProperty = FormCategory(id: 0, name: "Other",type: "other")
-                var updatedResponse = response
-                updatedResponse.append(otherProperty)
-                self.parentProperties.accept(updatedResponse)
-                self.currentDataSource.accept(updatedResponse)
-            case .failure(let error):
-                print("Error fetching categories: \(error)")
-            }
-        })
+    //  Updates subcategories dynamically based on selected category
+    func updateOptions() {
+        let filteredOptions = selectedData.value.selectedProperty?.options ?? []
+        currentDataSource.accept(filteredOptions)
     }
 }

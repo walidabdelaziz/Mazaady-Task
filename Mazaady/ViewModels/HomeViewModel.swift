@@ -10,7 +10,7 @@ import RxCocoa
 
 class HomeViewModel {
     var liveAvatars = BehaviorRelay<[UIImage]>(value: [])
-    var categories = BehaviorRelay<[Category]>(value: [])
+    var categories = BehaviorRelay<[CoursesCategory]>(value: [])
     let selectedCategoryIndex = BehaviorRelay<Int>(value: 0)
     var selectedCategoryCourses: Observable<[Course]> {
         return Observable.combineLatest(categories.asObservable(), selectedCategoryIndex.asObservable())
@@ -62,23 +62,23 @@ class HomeViewModel {
         ]
         let animationCourses: [Course] = []
         let allCourses = uiUxCourses + illustrationCourses + animationCourses
-        let categoriesData: [Category] = [
-            Category(
+        let categoriesData: [CoursesCategory] = [
+            CoursesCategory(
                 id: 1,
                 name: "All",
                 courses: allCourses
             ),
-            Category(
+            CoursesCategory(
                 id: 2,
                 name: "UI/UX",
                 courses: uiUxCourses
             ),
-            Category(
+            CoursesCategory(
                 id: 3,
                 name: "Illustration",
                 courses: illustrationCourses
             ),
-            Category(
+            CoursesCategory(
                 id: 4,
                 name: "3D Animation",
                 courses: animationCourses

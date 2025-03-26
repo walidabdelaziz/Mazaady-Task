@@ -9,4 +9,5 @@ public enum DataType: Int {
     case category = 0
     case subCategory = 1
     case property = 2
+    case option = 3
 }

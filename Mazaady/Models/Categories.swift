@@ -36,7 +36,8 @@ struct FormCategory: Codable, Equatable {
     var image: Image?
     var seoTags: [JSONAny]?
     var isOther: Bool?
-    var options: [Option]?
+    var hasChild: Bool?
+    var options: [FormCategory]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, slug, type, options
@@ -45,11 +46,13 @@ struct FormCategory: Codable, Equatable {
         case image
         case seoTags = "seo_tags"
         case isOther = "is_other"
+        case hasChild = "has_child"
     }
     public static func ==(lhs: FormCategory, rhs: FormCategory) -> Bool {
         return lhs.id == rhs.id
     }
 }
+
 // MARK: - Image
 struct Image: Codable {
     var medium, thumbnail: String?

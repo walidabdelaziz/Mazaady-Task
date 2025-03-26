@@ -5,12 +5,11 @@
 //  Created by Walid Ahmed on 26/03/2025.
 //
 
-struct Category {
+struct CoursesCategory {
     let id: Int
     let name: String
     let courses: [Course]
 }
-
 struct Course {
     let id: Int
     let category: String

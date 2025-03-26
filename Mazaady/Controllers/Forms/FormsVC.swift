@@ -15,6 +15,10 @@ class FormsVC: UIViewController {
     let disposeBag = DisposeBag()
     let formsViewModel = FormsViewModel()
     
+    @IBOutlet weak var optionArrow: UIImageView!
+    @IBOutlet weak var optionLbl: UILabel!
+    @IBOutlet weak var optionTF: UITextField!
+    @IBOutlet weak var optionbgV: UIView!
     @IBOutlet weak var inputLbl: UILabel!
     @IBOutlet weak var inputTF: UITextField!
     @IBOutlet weak var inputbgV: UIView!
@@ -36,26 +40,31 @@ class FormsVC: UIViewController {
         setupUI()
     }
     func setupUI(){
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
-        tapGesture.cancelsTouchesInView = false
-        view.addGestureRecognizer(tapGesture)
-        [propertybgV, inputbgV].forEach {
+        configureTextFields()
+        [propertybgV, inputbgV, optionbgV].forEach {
             $0.isHidden = true
         }
         categoryLbl.text = "Category"
         subcategoryLbl.text = "SubCategory"
         propertyLbl.text = "Property"
+        optionLbl.text = "Option"
         inputLbl.text = "Property Note"
         categoryTF.placeholder = "Choose Category"
         subcategoryTF.placeholder = "Choose SubCategory"
         propertyTF.placeholder = "Choose Property"
+        optionTF.placeholder = "Choose Option"
         inputTF.placeholder = "Write Property Note"
-        [categoryTF,subcategoryTF,propertyTF, inputTF].forEach {
+    }
+    func configureTextFields() {
+        [categoryTF,subcategoryTF,propertyTF, inputTF,optionTF].forEach {
             $0?.dropShadow(radius: 3, opacity: 0.08, offset: CGSize(width: 1, height: 1))
             $0?.layer.cornerRadius = 8
             $0?.paddingLeft(padding: 8)
             $0?.delegate = self
         }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
     }
     private func handleCategorySelection() {
         SelectionManager.shared.handleSelection(viewModel: formsViewModel, vc: self, type: .category) {
@@ -65,7 +74,7 @@ class FormsVC: UIViewController {
             if !selectedData.dismissVC_Without_Action {
                 self.categoryTF.text = selectedData.selectedCategory?.name
                 if selectedData.selectedCategory?.id != selectedData.selectedSubCategory?.parentID{
-                    self.resetSelection(resetSubCategory: true, resetProperty: true)
+                    self.resetSelection(resetSubCategory: true, resetProperty: true, resetOption: true)
                 }
             }
         } setDataHandler: { [weak self] selectedData in
@@ -74,24 +83,6 @@ class FormsVC: UIViewController {
         }
         categoryArrow.rotateArrow()
     }
-    private func resetSelection(resetSubCategory: Bool = false, resetProperty: Bool = false) {
-        var updatedData = formsViewModel.selectedData.value
-        if resetSubCategory {
-            subcategoryTF.text = ""
-            [propertybgV, inputbgV].forEach {
-                $0.isHidden = true
-            }
-            updatedData.selectedSubCategory = nil
-        }
-        if resetProperty {
-            [propertyTF, inputTF].forEach {
-                $0.text = ""
-            }
-            updatedData.selectedProperty = nil
-        }
-        formsViewModel.selectedData.accept(updatedData)
-    }
-
     private func handleSubCategorySelection() {
         if categoryTF.text?.isEmpty == true{
             
@@ -122,12 +113,51 @@ class FormsVC: UIViewController {
             if !selectedData.dismissVC_Without_Action {
                 self.propertyTF.text = selectedData.selectedProperty?.name
                 inputbgV.isHidden = selectedData.selectedProperty?.type != "other" ? true : false
+                optionbgV.isHidden = selectedData.selectedProperty?.type != "other" ? false : true
+                if self.formsViewModel.selectedData.value.selectedOption?.id != selectedData.selectedOption?.id || selectedData.selectedProperty?.type == "other"{
+                    self.resetSelection(resetOption: true)
+                }
             }
         } setDataHandler: { [weak self] selectedData in
             guard let self = self else { return }
             self.formsViewModel.selectedData.accept(selectedData)
         }
         propertyArrow.rotateArrow()
+    }
+    private func handleOptionSelection() {
+        SelectionManager.shared.handleSelection(viewModel: formsViewModel, vc: self, type: .option) {
+            [weak self] selectedData in
+            guard let self = self else { return }
+            optionArrow.resetArrowRotation()
+            if !selectedData.dismissVC_Without_Action {
+                self.optionTF.text = selectedData.selectedOption?.name
+            }
+        } setDataHandler: { [weak self] selectedData in
+            guard let self = self else { return }
+            self.formsViewModel.selectedData.accept(selectedData)
+        }
+        optionArrow.rotateArrow()
+    }
+    private func resetSelection(resetSubCategory: Bool = false, resetProperty: Bool = false, resetOption: Bool = false) {
+        var updatedData = formsViewModel.selectedData.value
+        if resetSubCategory {
+            subcategoryTF.text = ""
+            [propertybgV, inputbgV, optionbgV].forEach {
+                $0.isHidden = true
+            }
+            updatedData.selectedSubCategory = nil
+        }
+        if resetProperty {
+            [propertyTF, inputTF, optionTF].forEach {
+                $0.text = ""
+            }
+            updatedData.selectedProperty = nil
+        }
+        if resetOption {
+            optionTF.text = ""
+            updatedData.selectedOption = nil
+        }
+        formsViewModel.selectedData.accept(updatedData)
     }
 }
 extension FormsVC: UITextFieldDelegate {
@@ -145,6 +175,10 @@ extension FormsVC: UITextFieldDelegate {
         }
         if textField == propertyTF {
             handlePropertySelection()
+            return false
+        }
+        if textField == optionTF {
+            handleOptionSelection()
             return false
         }
         return true

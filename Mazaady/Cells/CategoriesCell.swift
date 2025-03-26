@@ -12,7 +12,7 @@ class CategoriesCell: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var bgV: UIView!
     
-    var category: Category? {
+    var category: CoursesCategory? {
         didSet {
             guard let category = category else { return }
             titleLbl.text = category.name
