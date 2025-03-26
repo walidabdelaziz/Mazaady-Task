@@ -17,9 +17,8 @@ class DropDownVC: UIViewController {
     let disposeBag = DisposeBag()
     var formsViewModel = FormsViewModel()
     
+    @IBOutlet weak var searchTF: UITextField!
     @IBOutlet weak var cancelBtn: UIButton!
-    @IBOutlet weak var titleHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var dataTVHeight: NSLayoutConstraint!
     @IBOutlet weak var dataTV: UITableView!
     @IBOutlet weak var titleLbl: UILabel!
@@ -29,34 +28,43 @@ class DropDownVC: UIViewController {
         setupUI()
         bindViewModel()
     }
-    
-    func setupUI(){
+    func setupUI() {
+        configureView()
+        configureSearchField()
+        configureTableView()
+        updateUIForType()
+    }
+    func configureView() {
         bgV.dropShadow(radius: 3, opacity: 0.08, offset: CGSize(width: 1, height: 1))
         bgV.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        
-        dataTV.register(UINib(nibName: "DataTVCell", bundle: nil), forCellReuseIdentifier: "DataTVCell")
-        dataTV.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
-        bottomConstraint.constant = 32
-        
-        setLocalizations()
     }
-    func setLocalizations() {
+    func configureSearchField() {
+        searchTF.dropShadow(radius: 3, opacity: 0.08, offset: CGSize(width: 1, height: 1))
+        searchTF.layer.cornerRadius = 8
+        searchTF.paddingLeft(padding: 8)
+    }
+    func configureTableView() {
+        dataTV.register(UINib(nibName: "DataTVCell", bundle: nil), forCellReuseIdentifier: "DataTVCell")
+        dataTV.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    func updateUIForType() {
         switch type {
         case .category:
-            formsViewModel.getCategories { [weak self] in
-                guard let self = self else { return }
-                self.formsViewModel.currentDataSource.accept(self.formsViewModel.parentCategories.value)
-            }
-            titleLbl.text = "Categories"
+            formsViewModel.getCategories()
+            setTitleAndPlaceholder(title: "Categories", placeholder: "Search Categories")
         case .subCategory:
-            titleLbl.text = "Sub Categories"
+            setTitleAndPlaceholder(title: "Sub Categories", placeholder: "Search Sub Categories")
         case .property:
-            titleLbl.text = "Properties"
-            //                formsViewModel.currentDataSource.accept(formsViewModel.properties.value)
+            setTitleAndPlaceholder(title: "Properties", placeholder: "Search Properties")
         default:
             break
         }
     }
+    func setTitleAndPlaceholder(title: String, placeholder: String) {
+        titleLbl.text = title
+        searchTF.placeholder = placeholder
+    }
+
     func dismissWithoutAction(){
         var updatedData = formsViewModel.selectedData.value
         updatedData.dismissVC_Without_Action = true
@@ -131,5 +139,31 @@ class DropDownVC: UIViewController {
                 self.onConfirm?(self.formsViewModel.selectedData.value)
             })
             .disposed(by: disposeBag)
+        // Handle search
+        searchTF.rx.text.orEmpty
+            .distinctUntilChanged()
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] query in
+                guard let self = self else { return }
+                if query.isEmpty {
+                    if self.type == .category {
+                        self.formsViewModel.currentDataSource.accept(self.formsViewModel.parentCategories.value)
+                    } else if self.type == .subCategory {
+                        self.formsViewModel.currentDataSource.accept(self.formsViewModel.subCategories.value.filter {
+                            $0.parentID == self.formsViewModel.selectedData.value.selectedCategory?.id
+                        })
+                    }
+                } else {
+                    let source = (self.type == .category) ? self.formsViewModel.parentCategories.value :
+                                self.formsViewModel.subCategories.value.filter { $0.parentID == self.formsViewModel.selectedData.value.selectedCategory?.id }
+
+                    let filteredResults = source.filter {
+                        $0.name?.lowercased().contains(query.lowercased()) ?? false
+                    }
+                    self.formsViewModel.currentDataSource.accept(filteredResults)
+                }
+            })
+            .disposed(by: disposeBag)
+
     }
 }
