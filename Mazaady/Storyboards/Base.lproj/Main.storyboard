@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-Sa-naJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="683.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="602"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-Md-B5C">
                                                 <rect key="frame" x="16" y="16" width="361" height="43"/>
@@ -162,46 +162,44 @@
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Lu-bbv" customClass="FSPagerView" customModule="FSPagerView">
-                                                <rect key="frame" x="0.0" y="277.33333333333331" width="393" height="369.99999999999994"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="370" id="IyP-Cb-NLb"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                                        <integer key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-dY-J7O" customClass="AdvancedPageControlView" customModule="AdvancedPageControl">
-                                                <rect key="frame" x="16" y="651.33333333333337" width="361" height="20"/>
+                                                <rect key="frame" x="16" y="570" width="361" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zHn-b5-jSt"/>
                                                 </constraints>
                                             </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SYu-N9-Tfv">
+                                                <rect key="frame" x="0.0" y="245.33333333333329" width="393" height="340.66666666666674"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ctp-Ra-Zhg">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="QF5-Lz-bVr" secondAttribute="trailing" constant="16" id="3Wg-wR-jAP"/>
                                             <constraint firstAttribute="bottom" secondItem="iV4-dY-J7O" secondAttribute="bottom" constant="12" id="6fE-JE-Nuo"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="ACn-Aa-pxJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="26H-Lu-bbv" secondAttribute="trailing" id="FlU-b7-mMH"/>
-                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="centerX" secondItem="26H-Lu-bbv" secondAttribute="centerX" id="GhH-pz-oPW"/>
+                                            <constraint firstAttribute="trailing" secondItem="SYu-N9-Tfv" secondAttribute="trailing" id="D3I-bG-RGY"/>
                                             <constraint firstItem="iV4-dY-J7O" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="I1a-dD-BTr"/>
+                                            <constraint firstItem="SYu-N9-Tfv" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="JSa-3y-fbw"/>
                                             <constraint firstAttribute="trailing" secondItem="iV4-dY-J7O" secondAttribute="trailing" constant="16" id="KE5-MO-B3K"/>
                                             <constraint firstAttribute="trailing" secondItem="GWr-Md-B5C" secondAttribute="trailing" constant="16" id="LLb-fb-Pse"/>
                                             <constraint firstItem="5oP-FE-Le0" firstAttribute="top" secondItem="QF5-Lz-bVr" secondAttribute="bottom" constant="16" id="My9-yp-JZd"/>
                                             <constraint firstAttribute="trailing" secondItem="zpH-b2-7uy" secondAttribute="trailing" id="Oiu-2R-7Ge"/>
+                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="top" secondItem="SYu-N9-Tfv" secondAttribute="bottom" constant="-16" id="T5B-0V-j4o"/>
                                             <constraint firstItem="QF5-Lz-bVr" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="TS6-9o-YK1"/>
                                             <constraint firstItem="QF5-Lz-bVr" firstAttribute="top" secondItem="zpH-b2-7uy" secondAttribute="bottom" constant="20" id="Yzf-8z-CwR"/>
                                             <constraint firstItem="zpH-b2-7uy" firstAttribute="top" secondItem="GWr-Md-B5C" secondAttribute="bottom" constant="16" id="e4s-gH-vAm"/>
                                             <constraint firstItem="5oP-FE-Le0" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="jW5-tD-rjE"/>
+                                            <constraint firstItem="SYu-N9-Tfv" firstAttribute="top" secondItem="5oP-FE-Le0" secondAttribute="bottom" constant="-8" id="jjU-Rf-ERD"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="top" secondItem="Pdb-Sa-naJ" secondAttribute="top" constant="16" id="lXd-Qb-o4w"/>
-                                            <constraint firstItem="26H-Lu-bbv" firstAttribute="top" secondItem="5oP-FE-Le0" secondAttribute="bottom" constant="24" id="nHg-FS-xh1"/>
-                                            <constraint firstItem="26H-Lu-bbv" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="nI6-B9-Kj3"/>
-                                            <constraint firstItem="iV4-dY-J7O" firstAttribute="top" secondItem="26H-Lu-bbv" secondAttribute="bottom" constant="4" id="p4Z-cj-tW2"/>
                                             <constraint firstItem="zpH-b2-7uy" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="uTm-Vk-EpS"/>
                                             <constraint firstAttribute="trailing" secondItem="5oP-FE-Le0" secondAttribute="trailing" id="zYw-Rp-ja7"/>
                                         </constraints>
@@ -225,14 +223,15 @@
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="leading" secondItem="CIb-tU-VeV" secondAttribute="leading" id="Q8T-LM-rTc"/>
                             <constraint firstItem="5oP-FE-Le0" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.053" id="an6-Tn-ea7"/>
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="top" secondItem="CIb-tU-VeV" secondAttribute="top" id="h2R-ae-tX3"/>
+                            <constraint firstItem="SYu-N9-Tfv" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.4" id="tdD-h8-cG2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="homeIcon" id="qS4-Wp-qnp"/>
                     <navigationItem key="navigationItem" id="h5S-aC-kqD"/>
                     <connections>
                         <outlet property="categoriesCV" destination="5oP-FE-Le0" id="Txv-V1-eBM"/>
+                        <outlet property="coursesCV" destination="SYu-N9-Tfv" id="Yxg-b3-VSZ"/>
                         <outlet property="coursesPageControl" destination="iV4-dY-J7O" id="P2l-ky-myY"/>
-                        <outlet property="coursesPageViewer" destination="26H-Lu-bbv" id="ZyV-Cn-d6b"/>
                         <outlet property="headerImg" destination="zgo-dc-h8m" id="MJL-7c-b4a"/>
                         <outlet property="headerbgV" destination="GWr-Md-B5C" id="Mh4-ea-aOB"/>
                         <outlet property="livesCV" destination="zpH-b2-7uy" id="n9e-gA-kUo"/>

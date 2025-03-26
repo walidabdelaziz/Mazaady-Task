@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import FSPagerView
 
-class CoursesCell: FSPagerViewCell {
+class CoursesCell: UICollectionViewCell {
 
     @IBOutlet weak var courseNameLbl: UILabel!
     @IBOutlet weak var authorRoleLbl: UILabel!

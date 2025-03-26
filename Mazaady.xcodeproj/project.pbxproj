@@ -29,6 +29,7 @@
 		CBC05F262D93805700386F14 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F252D93805100386F14 /* Courses.swift */; };
 		CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F282D93855400386F14 /* CoursesCell.swift */; };
 		CBC05F2B2D93855400386F14 /* CoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05F292D93855400386F14 /* CoursesCell.xib */; };
+		CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		CBC05F252D93805100386F14 /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		CBC05F282D93855400386F14 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
 		CBC05F292D93855400386F14 /* CoursesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCell.xib; sourceTree = "<group>"; };
+		CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 			children = (
 				CBC05F0E2D92A71600386F14 /* Extensions.swift */,
 				CBC05F142D92B1D500386F14 /* CustomTabBar.swift */,
+				CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,
 				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
 				CBC05F1F2D92C0A900386F14 /* HomeViewModel.swift in Sources */,
+				CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */,
 				CBC05F172D92B58A00386F14 /* HomeVC.swift in Sources */,
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
 				CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */,

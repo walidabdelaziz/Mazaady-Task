@@ -12,6 +12,13 @@ class HomeViewModel {
     var liveAvatars = BehaviorRelay<[UIImage]>(value: [])
     var categories = BehaviorRelay<[Category]>(value: [])
     let selectedCategoryIndex = BehaviorRelay<Int>(value: 0)
+    var selectedCategoryCourses: Observable<[Course]> {
+        return Observable.combineLatest(categories.asObservable(), selectedCategoryIndex.asObservable())
+            .map { categories, selectedIndex in
+                guard categories.indices.contains(selectedIndex) else { return [] }
+                return categories[selectedIndex].courses
+            }
+    }
 
     func addLiveAvatars(){
         let imageView1 = UIImage(named: "Avatar1") ?? UIImage()

@@ -9,7 +9,6 @@ import UIKit
 import Foundation
 import RxSwift
 import RxCocoa
-import FSPagerView
 import AdvancedPageControl
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
@@ -17,15 +16,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     let disposeBag = DisposeBag()
     let homeViewModel = HomeViewModel()
     
-    @IBOutlet weak var coursesPageViewer: FSPagerView!{
-        didSet {
-            coursesPageViewer.register(UINib(nibName: "CoursesCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-//            coursesPageViewer.interitemSpacing = 0
-            coursesPageViewer.transformer = FSPagerViewTransformer(type: .linear)
-            coursesPageViewer.interitemSpacing = 20
-            coursesPageViewer.itemSize = CGSize(width: 370, height: 370)
-        }
-    }
+    @IBOutlet weak var coursesCV: UICollectionView!
     @IBOutlet weak var coursesPageControl: AdvancedPageControlView!
     @IBOutlet weak var categoriesCV: UICollectionView!
     @IBOutlet weak var upcomingCoursesLbl: UILabel!
@@ -45,7 +36,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     }
     func setupUI(){
         setCollectionViewsConfiguration()
-        setPageViewerConfiguration()
         pointsLbl.textColor = .SecondaryColor
         upcomingCoursesLbl.attributedText = NSAttributedString.styledText(
             mainText: "Upcoming",
@@ -72,13 +62,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             nibName: "CategoriesCell",
             estimatedSize: true
         )
+        
+        coursesCV.configureCollectionView(
+            nibName: "CoursesCell",
+            scrollDirection: .horizontal,
+            useCarousel: true,
+            estimatedSize: false,
+            itemSize: CGSize(width: UIScreen.main.bounds.width / 2, height: coursesCV.frame.height),
+            lineSpacing: 4,
+            interItemSpacing: 0,
+            contentInsets: .zero
+        )
     }
-    func setPageViewerConfiguration(){
-        [coursesPageViewer].forEach{
-            $0?.delegate = self
-            $0?.dataSource = self
-        }
-    }
+
     func setPageControlCount(){
         let courses =  homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses
         coursesPageControl.isHidden = courses.isEmpty ? true : false
@@ -106,7 +102,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
                 self.categoriesCV.reloadData()
-                self.coursesPageViewer.reloadData()
+                self.coursesCV.reloadData()
                 self.setPageControlCount()
             })
             .disposed(by: disposeBag)
@@ -132,6 +128,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             }
         })
         .disposed(by: disposeBag)
+        
+        // bind courses
+        homeViewModel.selectedCategoryCourses
+            .bind(to: coursesCV.rx.items(cellIdentifier: "CoursesCell", cellType: CoursesCell.self)) { row, course, cell in
+                cell.course = course
+            }
+            .disposed(by: disposeBag)
     }
     func scrollToCategory(indexPath: IndexPath) {
         guard indexPath.row < homeViewModel.categories.value.count else { return }
@@ -142,19 +145,3 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         }
     }
 }
-extension HomeVC: FSPagerViewDataSource,FSPagerViewDelegate{
-    func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses.count
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index) as! CoursesCell
-        let course = homeViewModel.categories.value[homeViewModel.selectedCategoryIndex.value].courses[index]
-        cell.course = course
-        return cell
-    }
-    func pagerViewDidScroll(_ pagerView: FSPagerView) {
-        coursesPageControl.setPage(pagerView.currentIndex)
-    }
-}
-

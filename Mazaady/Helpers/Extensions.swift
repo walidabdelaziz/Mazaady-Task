@@ -104,10 +104,11 @@ extension NSAttributedString {
         return attributedString
     }
 }
-extension UICollectionView{
+extension UICollectionView {
     func configureCollectionView(
         nibName: String,
         scrollDirection: UICollectionView.ScrollDirection = .horizontal,
+        useCarousel: Bool = false,
         estimatedSize: Bool = false,
         itemSize: CGSize? = nil,
         lineSpacing: CGFloat = 10,
@@ -117,8 +118,8 @@ extension UICollectionView{
         // Register cell
         self.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
 
-        // Setup layout
-        let layout = UICollectionViewFlowLayout()
+        // Use CarouselFlowLayout if enabled, else default to UICollectionViewFlowLayout
+        let layout: UICollectionViewFlowLayout = useCarousel ? CarouselFlowLayout() : UICollectionViewFlowLayout()
         layout.scrollDirection = scrollDirection
         layout.minimumLineSpacing = lineSpacing
         layout.minimumInteritemSpacing = interItemSpacing
