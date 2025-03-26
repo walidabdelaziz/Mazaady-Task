@@ -15,6 +15,8 @@ class FormsVC: UIViewController {
     let disposeBag = DisposeBag()
     let formsViewModel = FormsViewModel()
     
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var optionArrow: UIImageView!
     @IBOutlet weak var optionLbl: UILabel!
     @IBOutlet weak var optionTF: UITextField!
@@ -38,8 +40,10 @@ class FormsVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        bindViewModel()
     }
     func setupUI(){
+        configureButtons()
         configureTextFields()
         [propertybgV, inputbgV, optionbgV].forEach {
             $0.isHidden = true
@@ -54,6 +58,27 @@ class FormsVC: UIViewController {
         propertyTF.placeholder = "Choose Property"
         optionTF.placeholder = "Choose Option"
         inputTF.placeholder = "Write Property Note"
+        submitBtn.setTitle("Submit", for: .normal)
+        resetBtn.setTitle("Reset", for: .normal)
+    }
+    func configureButtons() {
+        [submitBtn, resetBtn].forEach {
+            $0.layer.cornerRadius = 8
+        }
+        submitBtn.backgroundColor = .PrimaryColor
+        submitBtn.setTitleColor(.white, for: .normal)
+        resetBtn.backgroundColor = .white
+        resetBtn.setTitleColor(.PrimaryColor, for: .normal)
+        resetBtn.layer.borderWidth = 1
+        resetBtn.layer.borderColor = UIColor.PrimaryColor.cgColor
+    }
+    func bindViewModel() {
+        // bind reset button
+        resetBtn.rx.tap
+            .bind(onNext: { [weak self] in
+                guard let self = self else{return}
+                self.resetSelection(resetCategory: true ,resetSubCategory: true, resetProperty: true, resetOption: true)
+            }).disposed(by: disposeBag)
     }
     func configureTextFields() {
         [categoryTF,subcategoryTF,propertyTF, inputTF,optionTF].forEach {
@@ -138,8 +163,12 @@ class FormsVC: UIViewController {
         }
         optionArrow.rotateArrow()
     }
-    private func resetSelection(resetSubCategory: Bool = false, resetProperty: Bool = false, resetOption: Bool = false) {
+    private func resetSelection(resetCategory: Bool = false, resetSubCategory: Bool = false, resetProperty: Bool = false, resetOption: Bool = false) {
         var updatedData = formsViewModel.selectedData.value
+        if resetCategory {
+            categoryTF.text = ""
+            updatedData.selectedCategory = nil
+        }
         if resetSubCategory {
             subcategoryTF.text = ""
             [propertybgV, inputbgV, optionbgV].forEach {

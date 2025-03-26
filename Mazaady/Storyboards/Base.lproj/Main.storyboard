@@ -257,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoY-dN-LXK">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="586.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="675.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j77-YZ-aDJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="546.66666666666663"/>
@@ -471,11 +471,66 @@
                                                     <constraint firstItem="8e1-DI-8Me" firstAttribute="height" secondItem="cfx-M4-Cq9" secondAttribute="height" id="vk1-OV-u3S"/>
                                                 </constraints>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-rh-5UE">
+                                                <rect key="frame" x="0.0" y="578.66666666666663" width="393" height="65"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmp-TZ-MA9">
+                                                        <rect key="frame" x="20" y="0.0" width="170.66666666666666" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="oPd-rh-prQ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <state key="normal" title="Reset">
+                                                            <color key="titleColor" red="0.83921568629999999" green="0.1176470588" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-Kg-cfQ">
+                                                        <rect key="frame" x="202.66666666666663" y="0.0" width="170.33333333333337" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="f4y-wc-sLe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <color key="tintColor" red="0.070588235289999995" green="0.2784313725" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Submit">
+                                                            <color key="titleColor" red="0.070588235289999995" green="0.2784313725" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="I0b-Kg-cfQ" secondAttribute="trailing" constant="20" id="4fm-f3-gNI"/>
+                                                    <constraint firstItem="I0b-Kg-cfQ" firstAttribute="leading" secondItem="Rmp-TZ-MA9" secondAttribute="trailing" constant="12" id="Vvj-dB-Lhv"/>
+                                                    <constraint firstItem="Rmp-TZ-MA9" firstAttribute="top" secondItem="gEG-rh-5UE" secondAttribute="top" id="Wvb-TN-MXa"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Rmp-TZ-MA9" secondAttribute="bottom" constant="25" id="cKS-zj-OQc"/>
+                                                    <constraint firstItem="I0b-Kg-cfQ" firstAttribute="width" secondItem="Rmp-TZ-MA9" secondAttribute="width" id="nEu-NE-7Nn"/>
+                                                    <constraint firstItem="Rmp-TZ-MA9" firstAttribute="leading" secondItem="gEG-rh-5UE" secondAttribute="leading" constant="20" id="tpF-oV-Qgs"/>
+                                                    <constraint firstItem="I0b-Kg-cfQ" firstAttribute="centerY" secondItem="Rmp-TZ-MA9" secondAttribute="centerY" id="vS5-xE-5LT"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="gEG-rh-5UE" firstAttribute="leading" secondItem="IoY-dN-LXK" secondAttribute="leading" id="9eC-oU-A0B"/>
                                             <constraint firstItem="j77-YZ-aDJ" firstAttribute="leading" secondItem="IoY-dN-LXK" secondAttribute="leading" id="Nqt-1p-Q7q"/>
-                                            <constraint firstAttribute="bottom" secondItem="j77-YZ-aDJ" secondAttribute="bottom" constant="40" id="QTV-8l-abv"/>
+                                            <constraint firstItem="gEG-rh-5UE" firstAttribute="top" secondItem="j77-YZ-aDJ" secondAttribute="bottom" constant="32" id="ObK-9g-zjj"/>
+                                            <constraint firstAttribute="trailing" secondItem="gEG-rh-5UE" secondAttribute="trailing" id="RW5-sc-Jbd"/>
+                                            <constraint firstAttribute="bottom" secondItem="gEG-rh-5UE" secondAttribute="bottom" constant="32" id="geS-9A-r0N"/>
                                             <constraint firstAttribute="trailing" secondItem="j77-YZ-aDJ" secondAttribute="trailing" id="s3W-Nn-Cvm"/>
                                             <constraint firstItem="j77-YZ-aDJ" firstAttribute="top" secondItem="IoY-dN-LXK" secondAttribute="top" id="sEZ-fh-tt6"/>
                                         </constraints>
@@ -518,10 +573,12 @@
                         <outlet property="propertyLbl" destination="8QP-kR-q8J" id="9Ho-5d-soV"/>
                         <outlet property="propertyTF" destination="8e1-DI-8Me" id="14q-6V-sy0"/>
                         <outlet property="propertybgV" destination="L2I-mr-1oz" id="kBX-Ip-QMd"/>
+                        <outlet property="resetBtn" destination="Rmp-TZ-MA9" id="rDB-DQ-QG2"/>
                         <outlet property="subcategoryArrow" destination="SDW-RH-HXC" id="OwL-h7-TiP"/>
                         <outlet property="subcategoryLbl" destination="tce-wZ-pDb" id="QWi-NM-FfK"/>
                         <outlet property="subcategoryTF" destination="k6B-Tl-sfy" id="GQL-QM-T60"/>
                         <outlet property="subcategorybgV" destination="wQR-vx-i3W" id="o8x-Jz-ipv"/>
+                        <outlet property="submitBtn" destination="I0b-Kg-cfQ" id="OyV-h6-uyh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imf-WP-5KG" sceneMemberID="firstResponder"/>
