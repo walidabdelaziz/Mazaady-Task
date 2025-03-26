@@ -432,9 +432,6 @@
                                         <rect key="frame" x="10" y="22.666666666666629" width="37" height="42"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="cancel"/>
-                                        <connections>
-                                            <action selector="cancelBtnPressed:" destination="Yhs-eK-7Su" eventType="touchUpInside" id="Woa-g5-xI1"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-Cb-QA4">
                                         <rect key="frame" x="173.66666666666666" y="28" width="45.666666666666657" height="31"/>
@@ -483,6 +480,7 @@
                     <connections>
                         <outlet property="bgV" destination="Ync-5s-0ln" id="8In-so-bfL"/>
                         <outlet property="bottomConstraint" destination="ZjK-OT-VDc" id="Jqq-i5-LAj"/>
+                        <outlet property="cancelBtn" destination="4Fe-Tq-jiU" id="qY6-8S-DmA"/>
                         <outlet property="dataTV" destination="Y8Q-pD-1Ca" id="PCX-dw-Zjn"/>
                         <outlet property="dataTVHeight" destination="5XA-yR-MiU" id="FVj-l6-NRR"/>
                         <outlet property="titleHeightConstraint" destination="EMV-cJ-XJ4" id="q5b-yA-ReC"/>

@@ -6,5 +6,7 @@
 //
 import Foundation
 struct SelectedData: Codable {
-   
+    var dismissVC_Without_Action: Bool = false
+    var selectedCategory: FormCategory?
+    var selectedSubCategory: FormCategory?
 }

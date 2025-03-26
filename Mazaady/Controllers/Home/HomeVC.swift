@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import AdvancedPageControl
 
-class HomeVC: UIViewController, UICollectionViewDelegate {
+class HomeVC: UIViewController {
     
     let disposeBag = DisposeBag()
     let homeViewModel = HomeViewModel()
@@ -30,8 +30,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
-        homeViewModel.addLiveAvatars()
-        homeViewModel.addCategories()
         bindViewModel()
     }
     func setupUI(){

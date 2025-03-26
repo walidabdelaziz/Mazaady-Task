@@ -93,6 +93,17 @@ extension UIImageView{
             }
         }
     }
+     func resetArrowRotation(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.transform = CGAffineTransform.identity
+        })
+    }
+     func rotateArrow(){
+        let transform = CGAffineTransform.identity
+        UIView.animate(withDuration: 0.3, animations: {
+            self.transform = transform.rotated(by: CGFloat(Double.pi))
+        })
+    }
 }
 extension NSAttributedString {
     static func styledText(mainText: String, subText: String, mainFont: UIFont, subFont: UIFont) -> NSAttributedString {

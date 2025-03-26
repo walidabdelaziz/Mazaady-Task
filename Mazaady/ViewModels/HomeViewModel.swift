@@ -19,7 +19,11 @@ class HomeViewModel {
                 return categories[selectedIndex].courses
             }
     }
-
+    
+    init() {
+        addLiveAvatars()
+        addCategories()
+     }
     func addLiveAvatars(){
         let imageView1 = UIImage(named: "Avatar1") ?? UIImage()
         let imageView2 = UIImage(named: "Avatar2") ?? UIImage()

@@ -7,6 +7,6 @@
 
 public enum DataType: Int {
     case category = 0
-    case subcategory = 1
+    case subCategory = 1
     case property = 2
 }

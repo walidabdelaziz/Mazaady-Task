@@ -34,6 +34,14 @@
 		CBC05F942D9426AA00386F14 /* DropDownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F932D9426AA00386F14 /* DropDownVC.swift */; };
 		CBC05F972D94274900386F14 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F962D94274700386F14 /* Enums.swift */; };
 		CBC05F992D94278D00386F14 /* SelectedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F982D94278800386F14 /* SelectedData.swift */; };
+		CBC05F9D2D94282D00386F14 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F9C2D94282700386F14 /* NetworkManager.swift */; };
+		CBC05FA02D94285000386F14 /* FormsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F9F2D94284A00386F14 /* FormsViewModel.swift */; };
+		CBC05FA22D94288500386F14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA12D94287E00386F14 /* Constants.swift */; };
+		CBC05FA42D94294600386F14 /* FormsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA32D94294300386F14 /* FormsManager.swift */; };
+		CBC05FA62D9429FD00386F14 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA52D9429FA00386F14 /* Categories.swift */; };
+		CBC05FA82D942F0300386F14 /* SelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA72D942EFD00386F14 /* SelectionManager.swift */; };
+		CBC05FAD2D94417500386F14 /* DataTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05FAC2D94417500386F14 /* DataTVCell.xib */; };
+		CBC05FAE2D94417500386F14 /* DataTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FAB2D94417500386F14 /* DataTVCell.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +99,14 @@
 		CBC05F932D9426AA00386F14 /* DropDownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownVC.swift; sourceTree = "<group>"; };
 		CBC05F962D94274700386F14 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		CBC05F982D94278800386F14 /* SelectedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedData.swift; sourceTree = "<group>"; };
+		CBC05F9C2D94282700386F14 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CBC05F9F2D94284A00386F14 /* FormsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewModel.swift; sourceTree = "<group>"; };
+		CBC05FA12D94287E00386F14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CBC05FA32D94294300386F14 /* FormsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsManager.swift; sourceTree = "<group>"; };
+		CBC05FA52D9429FA00386F14 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		CBC05FA72D942EFD00386F14 /* SelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionManager.swift; sourceTree = "<group>"; };
+		CBC05FAB2D94417500386F14 /* DataTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTVCell.swift; sourceTree = "<group>"; };
+		CBC05FAC2D94417500386F14 /* DataTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataTVCell.xib; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +166,7 @@
 			children = (
 				CBC05EF02D929DD600386F14 /* AppDelegate.swift */,
 				CBC05F102D92A7A100386F14 /* Helpers */,
+				CBC05F9E2D94283100386F14 /* Managers */,
 				CBC05F272D93805C00386F14 /* Models */,
 				CBC05F1D2D92BC1B00386F14 /* Cells */,
 				CBC05F0B2D92A56C00386F14 /* Controllers */,
@@ -212,6 +229,7 @@
 			children = (
 				CBC05F0E2D92A71600386F14 /* Extensions.swift */,
 				CBC05F142D92B1D500386F14 /* CustomTabBar.swift */,
+				CBC05FA12D94287E00386F14 /* Constants.swift */,
 				CBC05F2C2D93957D00386F14 /* CarouselFlowLayout.swift */,
 				CBC05F962D94274700386F14 /* Enums.swift */,
 			);
@@ -243,6 +261,8 @@
 				CBC05F222D92D14900386F14 /* CategoriesCell.xib */,
 				CBC05F282D93855400386F14 /* CoursesCell.swift */,
 				CBC05F292D93855400386F14 /* CoursesCell.xib */,
+				CBC05FAB2D94417500386F14 /* DataTVCell.swift */,
+				CBC05FAC2D94417500386F14 /* DataTVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -251,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC05F1E2D92C09000386F14 /* HomeViewModel.swift */,
+				CBC05F9F2D94284A00386F14 /* FormsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC05F252D93805100386F14 /* Courses.swift */,
+				CBC05FA52D9429FA00386F14 /* Categories.swift */,
 				CBC05F982D94278800386F14 /* SelectedData.swift */,
 			);
 			path = Models;
@@ -278,6 +300,16 @@
 				CBC05F932D9426AA00386F14 /* DropDownVC.swift */,
 			);
 			path = DropDown;
+			sourceTree = "<group>";
+		};
+		CBC05F9E2D94283100386F14 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05F9C2D94282700386F14 /* NetworkManager.swift */,
+				CBC05FA32D94294300386F14 /* FormsManager.swift */,
+				CBC05FA72D942EFD00386F14 /* SelectionManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		D1DB420A43FB3006E89D0A91 /* Frameworks */ = {
@@ -414,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC05F2B2D93855400386F14 /* CoursesCell.xib in Resources */,
+				CBC05FAD2D94417500386F14 /* DataTVCell.xib in Resources */,
 				CBC05F232D92D14900386F14 /* CategoriesCell.xib in Resources */,
 				CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */,
 				CBC05F1B2D92BC1300386F14 /* LivesCell.xib in Resources */,
@@ -564,21 +597,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC05F992D94278D00386F14 /* SelectedData.swift in Sources */,
+				CBC05FA22D94288500386F14 /* Constants.swift in Sources */,
 				CBC05F262D93805700386F14 /* Courses.swift in Sources */,
+				CBC05FA42D94294600386F14 /* FormsManager.swift in Sources */,
 				CBC05F242D92D14900386F14 /* CategoriesCell.swift in Sources */,
 				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
 				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,
 				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
+				CBC05FA62D9429FD00386F14 /* Categories.swift in Sources */,
+				CBC05FA02D94285000386F14 /* FormsViewModel.swift in Sources */,
 				CBC05F1F2D92C0A900386F14 /* HomeViewModel.swift in Sources */,
 				CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */,
+				CBC05FA82D942F0300386F14 /* SelectionManager.swift in Sources */,
 				CBC05F972D94274900386F14 /* Enums.swift in Sources */,
 				CBC05F172D92B58A00386F14 /* HomeVC.swift in Sources */,
+				CBC05F9D2D94282D00386F14 /* NetworkManager.swift in Sources */,
 				CBC05F912D9421C300386F14 /* FormsVC.swift in Sources */,
 				CBC05F942D9426AA00386F14 /* DropDownVC.swift in Sources */,
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
 				CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */,
 				CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */,
 				CBC05F1C2D92BC1300386F14 /* LivesCell.swift in Sources */,
+				CBC05FAE2D94417500386F14 /* DataTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
