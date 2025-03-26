@@ -14,24 +14,12 @@ class DataTVCell: UITableViewCell {
     @IBOutlet weak var bgV: UIView!
 
 
-    var category: FormCategory? {
+    var item: FormCategory? {
         didSet {
-            guard let category = category else { return }
-            titleLbl.text = category.name
+            guard let item = item else { return }
+            titleLbl.text = item.name
         }
     }
-//    var location: SearchLocation? {
-//        didSet {
-//            guard let location = location else { return }
-//            titleLbl.text = location.title
-//        }
-//    }
-//    var gender: String? {
-//        didSet {
-//            guard let gender = gender else { return }
-//            titleLbl.text = gender
-//        }
-//    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -30,15 +30,16 @@ struct FormCategoriesData: Codable {
 // MARK: - Category
 struct FormCategory: Codable, Equatable {
     var id: Int?
-    var name, slug: String?
+    var name, slug, type: String?
     var parentID: Int?
     var propertiesCount: Int?
     var image: Image?
     var seoTags: [JSONAny]?
     var isOther: Bool?
+    var options: [Option]?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, slug
+        case id, name, slug, type, options
         case parentID = "parent_id"
         case propertiesCount = "properties_count"
         case image

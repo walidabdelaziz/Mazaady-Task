@@ -9,4 +9,5 @@ import Foundation
 class Constants{
     static var BASE_URL = "https://stagingapi.mazaady.com/api/v1/"
     static var CATEGORIES = BASE_URL + "all-categories/"
+    static var PROPERTIES = BASE_URL + "properties/"
 }

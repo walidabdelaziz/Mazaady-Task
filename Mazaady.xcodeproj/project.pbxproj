@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		579BD20BA54AE4B17AE08BC9 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */; };
 		A7465DF02594CCD12D4EB5CE /* Pods_Mazaady_MazaadyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */; };
+		CB649F792D94AD9D0045534E /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F782D94AD9B0045534E /* Properties.swift */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
 		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
 		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
@@ -37,7 +38,7 @@
 		CBC05F9D2D94282D00386F14 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F9C2D94282700386F14 /* NetworkManager.swift */; };
 		CBC05FA02D94285000386F14 /* FormsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F9F2D94284A00386F14 /* FormsViewModel.swift */; };
 		CBC05FA22D94288500386F14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA12D94287E00386F14 /* Constants.swift */; };
-		CBC05FA42D94294600386F14 /* FormsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA32D94294300386F14 /* FormsManager.swift */; };
+		CBC05FA42D94294600386F14 /* FormsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA32D94294300386F14 /* FormsService.swift */; };
 		CBC05FA62D9429FD00386F14 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA52D9429FA00386F14 /* Categories.swift */; };
 		CBC05FA82D942F0300386F14 /* SelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FA72D942EFD00386F14 /* SelectionManager.swift */; };
 		CBC05FAD2D94417500386F14 /* DataTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05FAC2D94417500386F14 /* DataTVCell.xib */; };
@@ -70,6 +71,7 @@
 		4E70A7B4FEEA550A2FE99D29 /* Pods-MazaadyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MazaadyTests.release.xcconfig"; path = "Target Support Files/Pods-MazaadyTests/Pods-MazaadyTests.release.xcconfig"; sourceTree = "<group>"; };
 		51ABD5900B28113FBC47FC88 /* Pods-Mazaady-MazaadyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady-MazaadyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB649F782D94AD9B0045534E /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +104,7 @@
 		CBC05F9C2D94282700386F14 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CBC05F9F2D94284A00386F14 /* FormsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewModel.swift; sourceTree = "<group>"; };
 		CBC05FA12D94287E00386F14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CBC05FA32D94294300386F14 /* FormsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsManager.swift; sourceTree = "<group>"; };
+		CBC05FA32D94294300386F14 /* FormsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsService.swift; sourceTree = "<group>"; };
 		CBC05FA52D9429FA00386F14 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		CBC05FA72D942EFD00386F14 /* SelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionManager.swift; sourceTree = "<group>"; };
 		CBC05FAB2D94417500386F14 /* DataTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTVCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB649F772D94AD280045534E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CBC05FA32D94294300386F14 /* FormsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CBC05EB32D929DBB00386F14 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 				CBC05EF02D929DD600386F14 /* AppDelegate.swift */,
 				CBC05F102D92A7A100386F14 /* Helpers */,
 				CBC05F9E2D94283100386F14 /* Managers */,
+				CB649F772D94AD280045534E /* Services */,
 				CBC05F272D93805C00386F14 /* Models */,
 				CBC05F1D2D92BC1B00386F14 /* Cells */,
 				CBC05F0B2D92A56C00386F14 /* Controllers */,
@@ -281,6 +292,7 @@
 			children = (
 				CBC05F252D93805100386F14 /* Courses.swift */,
 				CBC05FA52D9429FA00386F14 /* Categories.swift */,
+				CB649F782D94AD9B0045534E /* Properties.swift */,
 				CBC05F982D94278800386F14 /* SelectedData.swift */,
 			);
 			path = Models;
@@ -306,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				CBC05F9C2D94282700386F14 /* NetworkManager.swift */,
-				CBC05FA32D94294300386F14 /* FormsManager.swift */,
 				CBC05FA72D942EFD00386F14 /* SelectionManager.swift */,
 			);
 			path = Managers;
@@ -596,10 +607,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB649F792D94AD9D0045534E /* Properties.swift in Sources */,
 				CBC05F992D94278D00386F14 /* SelectedData.swift in Sources */,
 				CBC05FA22D94288500386F14 /* Constants.swift in Sources */,
 				CBC05F262D93805700386F14 /* Courses.swift in Sources */,
-				CBC05FA42D94294600386F14 /* FormsManager.swift in Sources */,
+				CBC05FA42D94294600386F14 /* FormsService.swift in Sources */,
 				CBC05F242D92D14900386F14 /* CategoriesCell.swift in Sources */,
 				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
 				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,

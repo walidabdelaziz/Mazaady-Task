@@ -18,11 +18,12 @@ class FormsViewModel {
     var originalDataSource = BehaviorRelay<[FormCategory]>(value: [])
     var currentDataSource = BehaviorRelay<[FormCategory]>(value: [])
     var selectedData = BehaviorRelay<SelectedData>(value: SelectedData())
+    var parentProperties = BehaviorRelay<[FormCategory]>(value: [])
 
 
     func getCategories() {
         isLoading.accept(true)
-        FormsManager().getCategories(params: [:], completion: { [weak self] result in
+        FormsService().getCategories(completion: { [weak self] result in
             guard let self = self else { return }
             self.isLoading.accept(false)
             switch result {
@@ -51,5 +52,19 @@ class FormsViewModel {
         }
         let filteredSubCategories = subCategories.value.filter { $0.parentID == selectedCategory.id }
         currentDataSource.accept(filteredSubCategories)
+    }
+    func getProperties() {
+        isLoading.accept(true)
+        FormsService().getProperties(categoryId: selectedData.value.selectedSubCategory?.id ?? 0, completion: { [weak self] result in
+            guard let self = self else { return }
+            self.isLoading.accept(false)
+            switch result {
+            case .success(let response):
+                self.parentProperties.accept(response)
+                self.currentDataSource.accept(response)
+            case .failure(let error):
+                print("Error fetching categories: \(error)")
+            }
+        })
     }
 }

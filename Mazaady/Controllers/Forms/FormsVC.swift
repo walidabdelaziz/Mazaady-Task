@@ -33,6 +33,7 @@ class FormsVC: UIViewController {
         setupUI()
     }
     func setupUI(){
+        propertybgV.isHidden = true
         categoryLbl.text = "Category"
         subcategoryLbl.text = "SubCategory"
         propertyLbl.text = "Property"
@@ -54,10 +55,7 @@ class FormsVC: UIViewController {
             if !selectedData.dismissVC_Without_Action {
                 self.categoryTF.text = selectedData.selectedCategory?.name
                 if selectedData.selectedCategory?.id != selectedData.selectedSubCategory?.parentID{
-                    subcategoryTF.text = ""
-                    var updatedData = self.formsViewModel.selectedData.value
-                    updatedData.selectedSubCategory = nil
-                    self.formsViewModel.selectedData.accept(updatedData)
+                    self.resetSelection(resetSubCategory: true, resetProperty: true)
                 }
             }
         } setDataHandler: { [weak self] selectedData in
@@ -66,6 +64,27 @@ class FormsVC: UIViewController {
         }
         categoryArrow.rotateArrow()
     }
+    private func resetSelection(resetSubCategory: Bool = false, resetProperty: Bool = false) {
+        if resetSubCategory {
+            subcategoryTF.text = ""
+            propertybgV.isHidden = true
+        }
+        if resetProperty {
+            propertyTF.text = ""
+        }
+        var updatedData = formsViewModel.selectedData.value
+        if resetSubCategory {
+            subcategoryTF.text = ""
+            propertybgV.isHidden = true
+            updatedData.selectedSubCategory = nil
+        }
+        if resetProperty {
+            propertyTF.text = ""
+            updatedData.selectedProperty = nil
+        }
+        formsViewModel.selectedData.accept(updatedData)
+    }
+
     private func handleSubCategorySelection() {
         if categoryTF.text?.isEmpty == true{
             
@@ -76,6 +95,10 @@ class FormsVC: UIViewController {
                 subcategoryArrow.resetArrowRotation()
                 if !selectedData.dismissVC_Without_Action {
                     self.subcategoryTF.text = selectedData.selectedSubCategory?.name
+                    propertybgV.isHidden = selectedData.selectedSubCategory?.propertiesCount == 0 ? true : false
+                    if self.formsViewModel.selectedData.value.selectedSubCategory?.id != selectedData.selectedSubCategory?.id{
+                        self.resetSelection(resetProperty: true)
+                    }
                 }
             } setDataHandler: { [weak self] selectedData in
                 guard let self = self else { return }
@@ -90,7 +113,7 @@ class FormsVC: UIViewController {
             guard let self = self else { return }
             propertyArrow.resetArrowRotation()
             if !selectedData.dismissVC_Without_Action {
-//                self.propertyTF.text = selectedData.selectedProperty?.name
+                self.propertyTF.text = selectedData.selectedProperty?.name
             }
         } setDataHandler: { [weak self] selectedData in
             guard let self = self else { return }

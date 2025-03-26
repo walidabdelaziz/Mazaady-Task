@@ -55,6 +55,7 @@ class DropDownVC: UIViewController {
         case .subCategory:
             setTitleAndPlaceholder(title: "Sub Categories", placeholder: "Search Sub Categories")
         case .property:
+            formsViewModel.getProperties()
             setTitleAndPlaceholder(title: "Properties", placeholder: "Search Properties")
         default:
             break
@@ -94,43 +95,45 @@ class DropDownVC: UIViewController {
                 guard let self = self else{return}
                 self.dismissWithoutAction()
             }).disposed(by: disposeBag)
+        
         // bind categories
         formsViewModel.currentDataSource
-            .bind(to: dataTV.rx.items(cellIdentifier: "DataTVCell", cellType: DataTVCell.self)) { [weak self] row, category, cell in
+            .bind(to: dataTV.rx.items(cellIdentifier: "DataTVCell", cellType: DataTVCell.self)) { [weak self] row, item, cell in
                 guard let self = self else { return }
                 cell.selectionStyle = .none
                 switch self.type {
                 case .category:
-                    cell.category = category
-                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedCategory, item: category)
+                    cell.item = item
+                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedCategory, item: item)
                 case .subCategory:
-                    cell.category = category
-                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedSubCategory, item: category)
+                    cell.item = item
+                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedSubCategory, item: item)
                 case .property:
-                    cell.category = category
-                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedCategory, item: category)
+                    cell.item = item
+                    cell.updateCellUI(selectedItem: self.formsViewModel.selectedData.value.selectedProperty, item: item)
                 default:
                     break
                 }
             }
             .disposed(by: disposeBag)
+        
         // Handle selection
         dataTV.rx.itemSelected
             .map { indexPath in
                 return self.formsViewModel.currentDataSource.value[indexPath.row]
             }
-            .subscribe(onNext: { [weak self] category in
+            .subscribe(onNext: { [weak self] selectedItem in
                 guard let self = self else { return }
                 var updatedData = self.formsViewModel.selectedData.value
                 switch self.type {
                 case .category:
-                    updatedData.selectedCategory = category
+                    updatedData.selectedCategory = selectedItem
                     self.formsViewModel.selectedData.accept(updatedData)
                     self.formsViewModel.updateSubCategories()
                 case .subCategory:
-                    updatedData.selectedSubCategory = category
+                    updatedData.selectedSubCategory = selectedItem
                 case .property:
-                    updatedData.selectedSubCategory = category
+                    updatedData.selectedProperty = selectedItem
                 default:
                     break
                 }
@@ -139,23 +142,41 @@ class DropDownVC: UIViewController {
                 self.onConfirm?(self.formsViewModel.selectedData.value)
             })
             .disposed(by: disposeBag)
+        
         // Handle search
         searchTF.rx.text.orEmpty
             .distinctUntilChanged()
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] query in
                 guard let self = self else { return }
+
                 if query.isEmpty {
-                    if self.type == .category {
+                    switch self.type {
+                    case .category:
                         self.formsViewModel.currentDataSource.accept(self.formsViewModel.parentCategories.value)
-                    } else if self.type == .subCategory {
+                    case .subCategory:
                         self.formsViewModel.currentDataSource.accept(self.formsViewModel.subCategories.value.filter {
                             $0.parentID == self.formsViewModel.selectedData.value.selectedCategory?.id
                         })
+                    case .property:
+                        self.formsViewModel.currentDataSource.accept(self.formsViewModel.parentProperties.value)
+                    default:
+                        break
                     }
                 } else {
-                    let source = (self.type == .category) ? self.formsViewModel.parentCategories.value :
-                                self.formsViewModel.subCategories.value.filter { $0.parentID == self.formsViewModel.selectedData.value.selectedCategory?.id }
+                    let source: [FormCategory]
+                    switch self.type {
+                    case .category:
+                        source = self.formsViewModel.parentCategories.value
+                    case .subCategory:
+                        source = self.formsViewModel.subCategories.value.filter {
+                            $0.parentID == self.formsViewModel.selectedData.value.selectedCategory?.id
+                        }
+                    case .property:
+                        source = self.formsViewModel.parentProperties.value
+                    default:
+                        source = []
+                    }
 
                     let filteredResults = source.filter {
                         $0.name?.lowercased().contains(query.lowercased()) ?? false
@@ -164,6 +185,5 @@ class DropDownVC: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
-
     }
 }
