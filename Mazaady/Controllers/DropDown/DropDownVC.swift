@@ -39,9 +39,15 @@ class DropDownVC: UIViewController {
         bgV.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     func configureSearchField() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
         searchTF.dropShadow(radius: 3, opacity: 0.08, offset: CGSize(width: 1, height: 1))
         searchTF.layer.cornerRadius = 8
         searchTF.paddingLeft(padding: 8)
+    }
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     func configureTableView() {
         dataTV.register(UINib(nibName: "DataTVCell", bundle: nil), forCellReuseIdentifier: "DataTVCell")

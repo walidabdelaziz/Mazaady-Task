@@ -6,7 +6,6 @@
 //
 import UIKit
 import Foundation
-import Kingfisher
 
 extension UIColor {
     convenience init(hexString: String) {
@@ -62,37 +61,6 @@ extension UIView {
     }
 }
 extension UIImageView{
-    func setImage(imageStr: String, placeholder: String? = nil, renderImage: Bool? = false,showIndicatorView: Bool? = true, completionHandler: (() -> Void)? = nil) {
-        let imageURL = URL(string: imageStr)
-        if showIndicatorView == true{
-            self.kf.indicatorType = .activity
-            (self.kf.indicator?.view as? UIActivityIndicatorView)?.color = .PrimaryColor
-        }
-        self.kf.setImage(with: imageURL,  placeholder: placeholder != nil ? UIImage(named: placeholder!) : nil, options: [
-            .loadDiskFileSynchronously,
-            .cacheOriginalImage,
-            .transition(.fade(1)),
-        ]) { result in
-            switch result {
-            case .success(let imageResult):
-                // Set the image
-                if renderImage == true {
-                    self.image = imageResult.image.withRenderingMode(.alwaysTemplate)
-                    self.tintColor = UIColor.black
-                } else {
-                    self.image = imageResult.image
-                }
-                completionHandler?()
-            case .failure(let error):
-                // Handle the error
-                if !error.isTaskCancelled && !error.isNotCurrentTask {
-                    print("Error: \(error)")
-                    self.image = placeholder != nil ? UIImage(named: placeholder!) : nil
-                    self.contentMode = .scaleAspectFit
-                }
-            }
-        }
-    }
      func resetArrowRotation(){
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform.identity

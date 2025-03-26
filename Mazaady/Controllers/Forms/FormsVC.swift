@@ -36,6 +36,9 @@ class FormsVC: UIViewController {
         setupUI()
     }
     func setupUI(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
         [propertybgV, inputbgV].forEach {
             $0.isHidden = true
         }
@@ -128,6 +131,9 @@ class FormsVC: UIViewController {
     }
 }
 extension FormsVC: UITextFieldDelegate {
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == categoryTF {
             handleCategorySelection()

@@ -7,25 +7,19 @@ target 'Mazaady' do
 
   # Pods for Mazaady
   pod 'Alamofire'
-  pod 'NVActivityIndicatorView'
-  pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'FSPagerView'
   pod 'AdvancedPageControl'
-  pod 'ReachabilitySwift'
+  pod 'IQKeyboardManagerSwift'
 
   target 'MazaadyTests' do
     inherit! :search_paths
     # Pods for testing
   pod 'Alamofire'
-  pod 'NVActivityIndicatorView'
-  pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'FSPagerView'
   pod 'AdvancedPageControl'
-  pod 'ReachabilitySwift'
+  pod 'IQKeyboardManagerSwift'
   end
 
   target 'MazaadyUITests' do
