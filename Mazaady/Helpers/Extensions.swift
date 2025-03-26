@@ -32,6 +32,12 @@ extension UIColor {
     @nonobjc class var SecondaryColor: UIColor {
         return UIColor(hexString: "#FCD034")
     }
+    @nonobjc class var DarkGreyColor: UIColor {
+        return UIColor(hexString: "#9D9FA0")
+    }
+    @nonobjc class var LightGreyColor: UIColor {
+        return UIColor(hexString: "#F6F7FA")
+    }
 }
 extension UIView {
     func dropShadow(radius: CGFloat, opacity: Float = 0.3, offset: CGSize = CGSize(width: 1.5, height: 3)) {
@@ -74,5 +80,44 @@ extension UIImageView{
                 }
             }
         }
+    }
+}
+extension NSAttributedString {
+    static func styledText(mainText: String, subText: String, mainFont: UIFont, subFont: UIFont) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: mainText + " " + subText)
+        
+        attributedString.addAttribute(.font, value: mainFont, range: NSRange(location: 0, length: mainText.count))
+        attributedString.addAttribute(.font, value: subFont, range: NSRange(location: mainText.count + 1, length: subText.count))
+        
+        return attributedString
+    }
+}
+extension UICollectionView{
+    func configureCollectionView(
+        nibName: String,
+        scrollDirection: UICollectionView.ScrollDirection = .horizontal,
+        estimatedSize: Bool = false,
+        itemSize: CGSize? = nil,
+        lineSpacing: CGFloat = 10,
+        interItemSpacing: CGFloat = 10,
+        contentInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    ) {
+        // Register cell
+        self.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
+
+        // Setup layout
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = scrollDirection
+        layout.minimumLineSpacing = lineSpacing
+        layout.minimumInteritemSpacing = interItemSpacing
+        self.contentInset = contentInsets
+
+        if estimatedSize {
+            layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        } else if let size = itemSize {
+            layout.itemSize = size
+        }
+
+        self.setCollectionViewLayout(layout, animated: true)
     }
 }

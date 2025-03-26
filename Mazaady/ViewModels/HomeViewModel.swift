@@ -9,8 +9,9 @@ import RxSwift
 import RxCocoa
 
 class HomeViewModel {
- 
     var liveAvatars = BehaviorRelay<[UIImage]>(value: [])
+    var categories = BehaviorRelay<[String]>(value: [])
+    let selectedCategoryIndex = BehaviorRelay<Int>(value: 0)
 
     func addLiveAvatars(){
         let imageView1 = UIImage(named: "Avatar1") ?? UIImage()
@@ -18,5 +19,8 @@ class HomeViewModel {
         let imageView3 = UIImage(named: "Avatar3") ?? UIImage()
         let imageView4 = UIImage(named: "Avatar4") ?? UIImage()
         liveAvatars.accept([imageView1, imageView2, imageView3, imageView4])
+    }
+    func addCategories(){
+        categories.accept(["All", "UI/UX", "Illustration", "3D Animation"])
     }
 }

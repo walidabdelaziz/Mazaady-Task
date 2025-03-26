@@ -15,7 +15,6 @@ class LivesCell: UICollectionViewCell {
     var liveAvatar: UIImage? {
         didSet {
             guard let liveAvatar = liveAvatar else { return }
-            print("Setting image in cell: \(liveAvatar != nil)")
             profileImg.image = liveAvatar
         }
     }
@@ -23,9 +22,8 @@ class LivesCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        [profileImg, bgV].forEach {
-            $0.layer.cornerRadius = 24
-        }
+        profileImg.layer.cornerRadius = 20
+        bgV.layer.cornerRadius = 24
         bgV.layer.borderWidth = 4
         bgV.layer.borderColor = UIColor.PrimaryColor.cgColor
     }

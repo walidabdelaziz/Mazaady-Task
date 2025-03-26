@@ -24,6 +24,8 @@
 		CBC05F1B2D92BC1300386F14 /* LivesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05F1A2D92BC1300386F14 /* LivesCell.xib */; };
 		CBC05F1C2D92BC1300386F14 /* LivesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F192D92BC1300386F14 /* LivesCell.swift */; };
 		CBC05F1F2D92C0A900386F14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F1E2D92C09000386F14 /* HomeViewModel.swift */; };
+		CBC05F232D92D14900386F14 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05F222D92D14900386F14 /* CategoriesCell.xib */; };
+		CBC05F242D92D14900386F14 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F212D92D14900386F14 /* CategoriesCell.swift */; };
 		E70504394CEFA7ADA8D2B7F9 /* Pods_MazaadyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B27E351A13FBCE20A94636 /* Pods_MazaadyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		CBC05F192D92BC1300386F14 /* LivesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivesCell.swift; sourceTree = "<group>"; };
 		CBC05F1A2D92BC1300386F14 /* LivesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LivesCell.xib; sourceTree = "<group>"; };
 		CBC05F1E2D92C09000386F14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBC05F212D92D14900386F14 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		CBC05F222D92D14900386F14 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
 		DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady_MazaadyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5793CBA2CE5C831D820D29 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +218,8 @@
 			children = (
 				CBC05F192D92BC1300386F14 /* LivesCell.swift */,
 				CBC05F1A2D92BC1300386F14 /* LivesCell.xib */,
+				CBC05F212D92D14900386F14 /* CategoriesCell.swift */,
+				CBC05F222D92D14900386F14 /* CategoriesCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05F232D92D14900386F14 /* CategoriesCell.xib in Resources */,
 				CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */,
 				CBC05F1B2D92BC1300386F14 /* LivesCell.xib in Resources */,
 				CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */,
@@ -507,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC05F242D92D14900386F14 /* CategoriesCell.swift in Sources */,
 				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
 				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,
 				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
