@@ -16,6 +16,12 @@ The **Mazaady App** is designed to provide users with an intuitive experience fo
 
 ## Technologies Used
 
+### Reactive Programming with RxSwift
+
+- Utilizes RxSwift and RxCocoa for handling reactive UI updates efficiently.
+- Implements BehaviorRelay to manage state changes dynamically.
+- Uses CombineLatest and Observables to update UI elements in response to data changes.
+
 ### Asynchronous Programming
 
 - Utilizes asynchronous programming techniques to handle network requests and database operations efficiently.
