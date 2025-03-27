@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Mazaady
+
+  Created by Walid Ahmed on 27/03/2025.
+  
+*/
+"home" = "Home";
+"forms" = "Forms";
+"upcoming" = "Upcoming";
+"courses_of_this_week" = "courses of this week";
+"points" = "points";
+"category" = "Category";
+"subcategory" = "Sub Category";
+"property" = "Property";
+"property_note" = "Property Note";
+"choose_category" = "Choose Category";
+"choose_subcategory" = "Choose Sub Category";
+"choose_property" = "Choose Property";
+"choose_option" = "Choose Option";
+"write_property_note" = "Write Property Note";
+"submit" = "Submit";
+"reset" = "Reset";
+"please_select_category_first" = "Please Select Category First";
+"categories" = "Categories";
+"subcategories" = "Sub Categories";
+"properties" = "Properties";
+"options" = "Options";
+"search_categories" = "Search Categories";
+"search_subcategories" = "Search Sub Categories";
+"search_properties" = "Search Properties";
+"search_options" = "Search Options";
+
+    

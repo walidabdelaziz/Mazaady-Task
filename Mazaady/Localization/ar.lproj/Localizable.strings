@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Mazaady
+
+  Created by Walid Ahmed on 27/03/2025.
+  
+*/
+"home" = "الرئيسية";
+"forms" = "النماذج";
+"upcoming" = "القادمة";
+"courses_of_this_week" = "دورات هذا الأسبوع";
+"points" = "النقاط";
+"category" = "الفئة";
+"subcategory" = "الفئة الفرعية";
+"property" = "الخاصية";
+"property_note" = "ملاحظة الخاصية";
+"choose_category" = "اختر الفئة";
+"choose_subcategory" = "اختر الفئة الفرعية";
+"choose_property" = "اختر الخاصية";
+"choose_option" = "اختر الخيار";
+"write_property_note" = "اكتب ملاحظة الخاصية";
+"submit" = "إرسال";
+"reset" = "إعادة تعيين";
+"please_select_category_first" = "يرجى اختيار الفئة أولاً";
+"categories" = "الفئات";
+"subcategories" = "الفئات الفرعية";
+"properties" = "الخصائص";
+"options" = "الخيارات";
+"search_categories" = "بحث في الفئات";
+"search_subcategories" = "بحث في الفئات الفرعية";
+"search_properties" = "بحث في الخصائص";
+"search_options" = "بحث في الخيارات";

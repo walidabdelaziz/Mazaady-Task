@@ -57,14 +57,14 @@ class DropDownVC: UIViewController {
         switch type {
         case .category:
             formsViewModel.getCategories()
-            setTitleAndPlaceholder(title: "Categories", placeholder: "Search Categories")
+            setTitleAndPlaceholder(title: "categories".localized(), placeholder: "search_categories".localized())
         case .subCategory:
-            setTitleAndPlaceholder(title: "Sub Categories", placeholder: "Search Sub Categories")
+            setTitleAndPlaceholder(title: "subcategories".localized(), placeholder: "search_subcategories".localized())
         case .property:
             formsViewModel.getProperties()
-            setTitleAndPlaceholder(title: "Properties", placeholder: "Search Properties")
+            setTitleAndPlaceholder(title: "properties".localized(), placeholder: "search_properties".localized())
         case .option:
-            setTitleAndPlaceholder(title: "Options", placeholder: "Search Options")
+            setTitleAndPlaceholder(title: "options".localized(), placeholder: "search_options".localized())
         default:
             break
         }
@@ -199,6 +199,5 @@ class DropDownVC: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
-    
     }
 }

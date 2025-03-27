@@ -36,14 +36,14 @@ class HomeVC: UIViewController {
         setCollectionViewsConfiguration()
         pointsLbl.textColor = .SecondaryColor
         upcomingCoursesLbl.attributedText = NSAttributedString.styledText(
-            mainText: "Upcoming",
-            subText: "courses of this week",
+            mainText: "upcoming".localized(),
+            subText: "courses_of_this_week".localized(),
             mainFont: UIFont.systemFont(ofSize: 18, weight: .semibold),
             subFont: UIFont.systemFont(ofSize: 18, weight: .regular)
         )
         pointsLbl.attributedText = NSAttributedString.styledText(
             mainText: "+1600",
-            subText: "points",
+            subText: "points".localized(),
             mainFont: UIFont.systemFont(ofSize: 14, weight: .semibold),
             subFont: UIFont.systemFont(ofSize: 14, weight: .regular)
         )

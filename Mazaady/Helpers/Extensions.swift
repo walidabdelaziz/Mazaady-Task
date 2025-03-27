@@ -136,3 +136,8 @@ extension UITextField {
         self.rightViewMode = .always
     }
 }
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, comment: "")
+    }
+}

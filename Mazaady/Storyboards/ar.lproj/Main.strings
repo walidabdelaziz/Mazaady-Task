@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Property"; ObjectID = "8QP-kR-q8J"; */
+"8QP-kR-q8J.text" = "Property";
+
+/* Class = "UILabel"; text = "Hallo, Samuel!"; ObjectID = "CFa-HG-hQA"; */
+"CFa-HG-hQA.text" = "Hallo, Samuel!";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "I0b-Kg-cfQ"; */
+"I0b-Kg-cfQ.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Mazaady"; ObjectID = "N9L-yk-zks"; */
+"N9L-yk-zks.text" = "Mazaady";
+
+/* Class = "UILabel"; text = "Upcoming course of this week"; ObjectID = "QF5-Lz-bVr"; */
+"QF5-Lz-bVr.text" = "Upcoming course of this week";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "QGn-zL-Kko"; */
+"QGn-zL-Kko.text" = "Category";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "Rmp-TZ-MA9"; */
+"Rmp-TZ-MA9.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "Form Summary"; ObjectID = "Rxa-GK-Tib"; */
+"Rxa-GK-Tib.text" = "Form Summary";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ggb-qq-LZX"; */
+"ggb-qq-LZX.title" = "Item";
+
+/* Class = "UILabel"; text = "+1600 Points"; ObjectID = "iks-ex-n4X"; */
+"iks-ex-n4X.text" = "+1600 Points";
+
+/* Class = "UILabel"; text = "Property Options"; ObjectID = "jLs-3B-vq5"; */
+"jLs-3B-vq5.text" = "Property Options";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jkP-Cb-QA4"; */
+"jkP-Cb-QA4.text" = "Label";
+
+/* Class = "UILabel"; text = "Property Input"; ObjectID = "q1d-i2-2id"; */
+"q1d-i2-2id.text" = "Property Input";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "qS4-Wp-qnp"; */
+"qS4-Wp-qnp.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rsz-X2-OTb"; */
+"rsz-X2-OTb.text" = "Label";
+
+/* Class = "UILabel"; text = "Sub Category"; ObjectID = "tce-wZ-pDb"; */
+"tce-wZ-pDb.text" = "Sub Category";

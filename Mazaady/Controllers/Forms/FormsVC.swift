@@ -53,18 +53,18 @@ class FormsVC: UIViewController {
         [propertybgV, inputbgV, optionbgV, summarybgV].forEach {
             $0.isHidden = true
         }
-        categoryLbl.text = "Category"
-        subcategoryLbl.text = "SubCategory"
-        propertyLbl.text = "Property"
-        optionLbl.text = "Option"
-        inputLbl.text = "Property Note"
-        categoryTF.placeholder = "Choose Category"
-        subcategoryTF.placeholder = "Choose SubCategory"
-        propertyTF.placeholder = "Choose Property"
-        optionTF.placeholder = "Choose Option"
-        inputTF.placeholder = "Write Property Note"
-        submitBtn.setTitle("Submit", for: .normal)
-        resetBtn.setTitle("Reset", for: .normal)
+        categoryLbl.text = "category".localized()
+        subcategoryLbl.text = "subcategory".localized()
+        propertyLbl.text = "property".localized()
+        optionLbl.text = "option".localized()
+        inputLbl.text = "property_note".localized()
+        categoryTF.placeholder = "choose_category".localized()
+        subcategoryTF.placeholder = "choose_subcategory".localized()
+        propertyTF.placeholder = "choose_property".localized()
+        optionTF.placeholder = "choose_option".localized()
+        inputTF.placeholder = "write_property_note".localized()
+        submitBtn.setTitle("submit".localized(), for: .normal)
+        resetBtn.setTitle("reset".localized(), for: .normal)
     }
     func configureTableView() {
         summaryTV.register(UINib(nibName: "FormSummaryTVCell", bundle: nil), forCellReuseIdentifier: "FormSummaryTVCell")
@@ -147,7 +147,7 @@ class FormsVC: UIViewController {
     }
     private func handleSubCategorySelection() {
         if categoryTF.text?.isEmpty == true{
-            SelectionManager.shared.showAlert("Please Select Category First", vc: self)
+            SelectionManager.shared.showAlert("please_select_category_first".localized(), vc: self)
         }else{
             SelectionManager.shared.handleSelection(viewModel: formsViewModel, vc: self, type: .subCategory) {
                 [weak self] selectedData in

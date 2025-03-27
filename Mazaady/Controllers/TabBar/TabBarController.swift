@@ -51,8 +51,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     func setLocalization(){
         guard let items = tabBar.items else { return }
-        items[0].title = "Home"
-        items[1].title = "Forms"
+        items[0].title = "home".localized()
+        items[1].title = "forms".localized()
     }
     func animateAfterSelectingIndex(index: Int){
         let itemWidth = tabBar.frame.width / CGFloat(tabBar.items!.count)
