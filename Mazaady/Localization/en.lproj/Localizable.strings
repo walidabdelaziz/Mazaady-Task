@@ -13,6 +13,7 @@
 "category" = "Category";
 "subcategory" = "Sub Category";
 "property" = "Property";
+"option" = "Option";
 "property_note" = "Property Note";
 "choose_category" = "Choose Category";
 "choose_subcategory" = "Choose Sub Category";

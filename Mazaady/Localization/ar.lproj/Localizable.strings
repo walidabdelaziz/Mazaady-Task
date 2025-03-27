@@ -13,6 +13,7 @@
 "category" = "الفئة";
 "subcategory" = "الفئة الفرعية";
 "property" = "الخاصية";
+"option" = "الخيار";
 "property_note" = "ملاحظة الخاصية";
 "choose_category" = "اختر الفئة";
 "choose_subcategory" = "اختر الفئة الفرعية";
