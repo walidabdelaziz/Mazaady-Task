@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     let disposeBag = DisposeBag()
     let homeViewModel = HomeViewModel()
     
+    @IBOutlet weak var noDataLbl: UILabel!
     @IBOutlet weak var coursesCV: UICollectionView!
     @IBOutlet weak var coursesPageControl: AdvancedPageControlView!
     @IBOutlet weak var categoriesCV: UICollectionView!
@@ -47,6 +48,8 @@ class HomeVC: UIViewController {
             mainFont: UIFont.systemFont(ofSize: 14, weight: .semibold),
             subFont: UIFont.systemFont(ofSize: 14, weight: .regular)
         )
+        noDataLbl.isHidden = true
+        noDataLbl.text = "no_courses_available".localized()
     }
     func setCollectionViewsConfiguration(){
         livesCV.configureCollectionView(
@@ -132,6 +135,14 @@ class HomeVC: UIViewController {
             .bind(to: coursesCV.rx.items(cellIdentifier: "CoursesCell", cellType: CoursesCell.self)) { row, course, cell in
                 cell.course = course
             }
+            .disposed(by: disposeBag)
+        
+        // handle empty courses UI
+        homeViewModel.selectedCategoryCourses
+            .subscribe(onNext: { [weak self] courses in
+                guard let self = self else { return }
+                self.noDataLbl.isHidden = courses.isEmpty ? false : true
+            })
             .disposed(by: disposeBag)
     }
     func scrollToCategory(indexPath: IndexPath) {

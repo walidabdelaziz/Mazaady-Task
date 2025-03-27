@@ -180,13 +180,22 @@
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjy-T5-lTn">
+                                                <rect key="frame" x="16" y="408.66666666666669" width="361" height="21.666666666666686"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="QF5-Lz-bVr" secondAttribute="trailing" constant="16" id="3Wg-wR-jAP"/>
                                             <constraint firstAttribute="bottom" secondItem="iV4-dY-J7O" secondAttribute="bottom" constant="12" id="6fE-JE-Nuo"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="ACn-Aa-pxJ"/>
+                                            <constraint firstItem="Tjy-T5-lTn" firstAttribute="centerX" secondItem="SYu-N9-Tfv" secondAttribute="centerX" id="ArI-H1-Kys"/>
+                                            <constraint firstItem="Tjy-T5-lTn" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="BlD-9q-Clx"/>
                                             <constraint firstAttribute="trailing" secondItem="SYu-N9-Tfv" secondAttribute="trailing" id="D3I-bG-RGY"/>
+                                            <constraint firstItem="Tjy-T5-lTn" firstAttribute="centerY" secondItem="SYu-N9-Tfv" secondAttribute="centerY" id="HFQ-bW-jGO"/>
                                             <constraint firstItem="iV4-dY-J7O" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" constant="16" id="I1a-dD-BTr"/>
                                             <constraint firstItem="SYu-N9-Tfv" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="JSa-3y-fbw"/>
                                             <constraint firstAttribute="trailing" secondItem="iV4-dY-J7O" secondAttribute="trailing" constant="16" id="KE5-MO-B3K"/>
@@ -200,6 +209,7 @@
                                             <constraint firstItem="5oP-FE-Le0" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="jW5-tD-rjE"/>
                                             <constraint firstItem="SYu-N9-Tfv" firstAttribute="top" secondItem="5oP-FE-Le0" secondAttribute="bottom" constant="-8" id="jjU-Rf-ERD"/>
                                             <constraint firstItem="GWr-Md-B5C" firstAttribute="top" secondItem="Pdb-Sa-naJ" secondAttribute="top" constant="16" id="lXd-Qb-o4w"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tjy-T5-lTn" secondAttribute="trailing" constant="16" id="tV0-yK-EOg"/>
                                             <constraint firstItem="zpH-b2-7uy" firstAttribute="leading" secondItem="Pdb-Sa-naJ" secondAttribute="leading" id="uTm-Vk-EpS"/>
                                             <constraint firstAttribute="trailing" secondItem="5oP-FE-Le0" secondAttribute="trailing" id="zYw-Rp-ja7"/>
                                         </constraints>
@@ -235,6 +245,7 @@
                         <outlet property="headerImg" destination="zgo-dc-h8m" id="MJL-7c-b4a"/>
                         <outlet property="headerbgV" destination="GWr-Md-B5C" id="Mh4-ea-aOB"/>
                         <outlet property="livesCV" destination="zpH-b2-7uy" id="n9e-gA-kUo"/>
+                        <outlet property="noDataLbl" destination="Tjy-T5-lTn" id="bLY-Nv-TiM"/>
                         <outlet property="pointsLbl" destination="iks-ex-n4X" id="rEP-CB-8AC"/>
                         <outlet property="scrollView" destination="LMa-wZ-ckt" id="u2C-ZC-A9Z"/>
                         <outlet property="upcomingCoursesLbl" destination="QF5-Lz-bVr" id="OC0-Tl-Q6V"/>
