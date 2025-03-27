@@ -15,6 +15,10 @@ class FormsVC: UIViewController {
     let disposeBag = DisposeBag()
     let formsViewModel = FormsViewModel()
     
+    @IBOutlet weak var summaryTVHeight: NSLayoutConstraint!
+    @IBOutlet weak var summaryTV: UITableView!
+    @IBOutlet weak var summaryLbl: UILabel!
+    @IBOutlet weak var summarybgV: UIView!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var optionArrow: UIImageView!
@@ -43,9 +47,10 @@ class FormsVC: UIViewController {
         bindViewModel()
     }
     func setupUI(){
+        configureTableView()
         configureButtons()
         configureTextFields()
-        [propertybgV, inputbgV, optionbgV].forEach {
+        [propertybgV, inputbgV, optionbgV, summarybgV].forEach {
             $0.isHidden = true
         }
         categoryLbl.text = "Category"
@@ -61,6 +66,19 @@ class FormsVC: UIViewController {
         submitBtn.setTitle("Submit", for: .normal)
         resetBtn.setTitle("Reset", for: .normal)
     }
+    func configureTableView() {
+        summaryTV.register(UINib(nibName: "FormSummaryTVCell", bundle: nil), forCellReuseIdentifier: "FormSummaryTVCell")
+        summaryTV.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if(keyPath == "contentSize"){
+            if let newvalue = change?[.newKey]
+            {
+                let newsize = newvalue as! CGSize
+                summaryTVHeight.constant = newsize.height
+            }
+        }
+    }
     func configureButtons() {
         [submitBtn, resetBtn].forEach {
             $0.layer.cornerRadius = 8
@@ -73,12 +91,32 @@ class FormsVC: UIViewController {
         resetBtn.layer.borderColor = UIColor.PrimaryColor.cgColor
     }
     func bindViewModel() {
+        // bind input textfield
+        inputTF.rx.text.orEmpty
+            .bind(to: formsViewModel.propertyInputValue)
+            .disposed(by: self.disposeBag)
         // bind reset button
         resetBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
                 self.resetSelection(resetCategory: true ,resetSubCategory: true, resetProperty: true, resetOption: true)
             }).disposed(by: disposeBag)
+        
+        // bind submit button
+        submitBtn.rx.tap
+            .bind(onNext: { [weak self] in
+                guard let self = self else{return}
+                self.summarybgV.isHidden = false
+                self.formsViewModel.updateSummary()
+            }).disposed(by: disposeBag)
+        
+        formsViewModel.summaryItems
+            .bind(to: summaryTV.rx.items(cellIdentifier: "FormSummaryTVCell", cellType: FormSummaryTVCell.self)) { [weak self] row, item, cell in
+                guard let self = self else { return }
+                cell.selectionStyle = .none
+                cell.item = item
+            }
+            .disposed(by: disposeBag)
     }
     func configureTextFields() {
         [categoryTF,subcategoryTF,propertyTF, inputTF,optionTF].forEach {
@@ -186,6 +224,7 @@ class FormsVC: UIViewController {
             optionTF.text = ""
             updatedData.selectedOption = nil
         }
+        summarybgV.isHidden = true
         formsViewModel.selectedData.accept(updatedData)
     }
 }

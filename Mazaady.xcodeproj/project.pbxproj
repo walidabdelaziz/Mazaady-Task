@@ -10,6 +10,9 @@
 		579BD20BA54AE4B17AE08BC9 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */; };
 		A7465DF02594CCD12D4EB5CE /* Pods_Mazaady_MazaadyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6552105F3013F4E765E047 /* Pods_Mazaady_MazaadyUITests.framework */; };
 		CB649F792D94AD9D0045534E /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F782D94AD9B0045534E /* Properties.swift */; };
+		CB649F7B2D95520E0045534E /* FormSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F7A2D9552090045534E /* FormSummary.swift */; };
+		CB649F7E2D9553870045534E /* FormSummaryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB649F7D2D9553870045534E /* FormSummaryTVCell.xib */; };
+		CB649F7F2D9553870045534E /* FormSummaryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
 		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
 		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
@@ -72,6 +75,9 @@
 		51ABD5900B28113FBC47FC88 /* Pods-Mazaady-MazaadyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady-MazaadyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady-MazaadyUITests/Pods-Mazaady-MazaadyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		97F2F472B4A90D000549B8C9 /* Pods_Mazaady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB649F782D94AD9B0045534E /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		CB649F7A2D9552090045534E /* FormSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSummary.swift; sourceTree = "<group>"; };
+		CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSummaryTVCell.swift; sourceTree = "<group>"; };
+		CB649F7D2D9553870045534E /* FormSummaryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSummaryTVCell.xib; sourceTree = "<group>"; };
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,9 +185,9 @@
 				CBC05F9E2D94283100386F14 /* Managers */,
 				CB649F772D94AD280045534E /* Services */,
 				CBC05F272D93805C00386F14 /* Models */,
-				CBC05F1D2D92BC1B00386F14 /* Cells */,
 				CBC05F0B2D92A56C00386F14 /* Controllers */,
 				CBC05F202D92C0B200386F14 /* ViewModels */,
+				CBC05F1D2D92BC1B00386F14 /* Cells */,
 				CBC05F0D2D92A5B100386F14 /* Storyboards */,
 				CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */,
 				CBC05EF12D929DD600386F14 /* Assets.xcassets */,
@@ -274,6 +280,8 @@
 				CBC05F292D93855400386F14 /* CoursesCell.xib */,
 				CBC05FAB2D94417500386F14 /* DataTVCell.swift */,
 				CBC05FAC2D94417500386F14 /* DataTVCell.xib */,
+				CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */,
+				CB649F7D2D9553870045534E /* FormSummaryTVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				CBC05FA52D9429FA00386F14 /* Categories.swift */,
 				CB649F782D94AD9B0045534E /* Properties.swift */,
 				CBC05F982D94278800386F14 /* SelectedData.swift */,
+				CB649F7A2D9552090045534E /* FormSummary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +467,7 @@
 			files = (
 				CBC05F2B2D93855400386F14 /* CoursesCell.xib in Resources */,
 				CBC05FAD2D94417500386F14 /* DataTVCell.xib in Resources */,
+				CB649F7E2D9553870045534E /* FormSummaryTVCell.xib in Resources */,
 				CBC05F232D92D14900386F14 /* CategoriesCell.xib in Resources */,
 				CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */,
 				CBC05F1B2D92BC1300386F14 /* LivesCell.xib in Resources */,
@@ -615,6 +625,7 @@
 				CBC05F242D92D14900386F14 /* CategoriesCell.swift in Sources */,
 				CBC05F0F2D92A71900386F14 /* Extensions.swift in Sources */,
 				CBC05F152D92B1F900386F14 /* CustomTabBar.swift in Sources */,
+				CB649F7F2D9553870045534E /* FormSummaryTVCell.swift in Sources */,
 				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
 				CBC05FA62D9429FD00386F14 /* Categories.swift in Sources */,
 				CBC05FA02D94285000386F14 /* FormsViewModel.swift in Sources */,
@@ -629,6 +640,7 @@
 				CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */,
 				CBC05F2A2D93855400386F14 /* CoursesCell.swift in Sources */,
 				CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */,
+				CB649F7B2D95520E0045534E /* FormSummary.swift in Sources */,
 				CBC05F1C2D92BC1300386F14 /* LivesCell.swift in Sources */,
 				CBC05FAE2D94417500386F14 /* DataTVCell.swift in Sources */,
 			);

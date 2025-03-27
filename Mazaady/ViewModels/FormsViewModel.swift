@@ -13,12 +13,14 @@ import Alamofire
 
 class FormsViewModel {
     let isLoading = BehaviorRelay<Bool>(value: false)
+    var propertyInputValue = BehaviorRelay<String>(value: "")
     var parentCategories = BehaviorRelay<[FormCategory]>(value: [])
     var subCategories = BehaviorRelay<[FormCategory]>(value: [])
     var originalDataSource = BehaviorRelay<[FormCategory]>(value: [])
     var currentDataSource = BehaviorRelay<[FormCategory]>(value: [])
     var selectedData = BehaviorRelay<SelectedData>(value: SelectedData())
     var parentProperties = BehaviorRelay<[FormCategory]>(value: [])
+    var summaryItems = BehaviorRelay<[SummaryItem]>(value: [])
 
     func getCategories() {
         isLoading.accept(true)
@@ -69,9 +71,30 @@ class FormsViewModel {
         let filteredSubCategories = subCategories.value.filter { $0.parentID == selectedCategory.id }
         currentDataSource.accept(filteredSubCategories)
     }
-    //  Updates subcategories dynamically based on selected category
+    //  Updates options dynamically based on selected property
     func updateOptions() {
         let filteredOptions = selectedData.value.selectedProperty?.options ?? []
         currentDataSource.accept(filteredOptions)
     }
+    func updateSummary() {
+        var items: [SummaryItem] = []
+        if let category = selectedData.value.selectedCategory?.name {
+            items.append(SummaryItem(key: "Category", value: category))
+        }
+        if let subCategory = selectedData.value.selectedSubCategory?.name {
+            items.append(SummaryItem(key: "Subcategory", value: subCategory))
+        }
+        if let property = selectedData.value.selectedProperty?.name {
+            items.append(SummaryItem(key: "Property", value: property))
+        }
+        if selectedData.value.selectedProperty?.type == "other" && !propertyInputValue.value.isEmpty{
+            items.append(SummaryItem(key: "Property Note", value: propertyInputValue.value))
+        }else{
+            if let option = selectedData.value.selectedOption?.name {
+                items.append(SummaryItem(key: "Option", value: option))
+            }
+        }
+        summaryItems.accept(items)
+    }
+
 }
