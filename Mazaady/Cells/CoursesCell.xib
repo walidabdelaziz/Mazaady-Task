@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -137,8 +138,8 @@
                             <constraint firstAttribute="trailing" secondItem="JLb-Nz-4f5" secondAttribute="trailing" id="tmO-rb-zbZ"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-NA-SqF">
-                        <rect key="frame" x="16" y="153.66666666666666" width="385" height="21.666666666666657"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-NA-SqF">
+                        <rect key="frame" x="16" y="153.66666666666666" width="393" height="21.666666666666657"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -151,7 +152,7 @@
                     <constraint firstItem="zZ3-Qx-NUZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="I1p-CU-fNc"/>
                     <constraint firstItem="Tay-L4-dn2" firstAttribute="centerY" secondItem="Nec-dh-kED" secondAttribute="centerY" id="JVJ-qE-sfU"/>
                     <constraint firstItem="4dd-NA-SqF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="MKa-nZ-bJz"/>
-                    <constraint firstAttribute="trailing" secondItem="4dd-NA-SqF" secondAttribute="trailing" constant="16" id="Nsx-MJ-ApG"/>
+                    <constraint firstAttribute="trailing" secondItem="4dd-NA-SqF" secondAttribute="trailing" constant="8" id="Nsx-MJ-ApG"/>
                     <constraint firstItem="jqe-YL-Ihc" firstAttribute="top" secondItem="Nec-dh-kED" secondAttribute="bottom" constant="16" id="PCW-8g-TrA"/>
                     <constraint firstItem="jor-dH-jzt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="X9B-19-XPX"/>
                     <constraint firstItem="jqe-YL-Ihc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dPs-rl-HEI"/>

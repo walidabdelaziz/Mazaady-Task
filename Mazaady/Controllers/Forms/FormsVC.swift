@@ -63,6 +63,7 @@ class FormsVC: UIViewController {
         propertyTF.placeholder = "choose_property".localized()
         optionTF.placeholder = "choose_option".localized()
         inputTF.placeholder = "write_property_note".localized()
+        summaryLbl.text = "form_summary".localized()
         submitBtn.setTitle("submit".localized(), for: .normal)
         resetBtn.setTitle("reset".localized(), for: .normal)
     }
