@@ -115,7 +115,7 @@ class HomeVC: UIViewController {
         
         // Handle category selection and scrolling
         Observable.zip(
-            categoriesCV.rx.modelSelected(Category.self),
+            categoriesCV.rx.modelSelected(CoursesCategory.self),
             categoriesCV.rx.itemSelected
         )
         .subscribe(onNext: { [weak self] category, indexPath in

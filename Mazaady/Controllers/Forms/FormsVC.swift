@@ -106,13 +106,12 @@ class FormsVC: UIViewController {
         submitBtn.rx.tap
             .bind(onNext: { [weak self] in
                 guard let self = self else{return}
-                self.summarybgV.isHidden = false
                 self.formsViewModel.updateSummary()
+                self.summarybgV.isHidden = self.formsViewModel.summaryItems.value.isEmpty ? true : false
             }).disposed(by: disposeBag)
         
         formsViewModel.summaryItems
-            .bind(to: summaryTV.rx.items(cellIdentifier: "FormSummaryTVCell", cellType: FormSummaryTVCell.self)) { [weak self] row, item, cell in
-                guard let self = self else { return }
+            .bind(to: summaryTV.rx.items(cellIdentifier: "FormSummaryTVCell", cellType: FormSummaryTVCell.self)) {row, item, cell in
                 cell.selectionStyle = .none
                 cell.item = item
             }
