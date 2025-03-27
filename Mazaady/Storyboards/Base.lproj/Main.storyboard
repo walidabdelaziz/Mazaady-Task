@@ -157,6 +157,9 @@
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5oP-FE-Le0">
                                                 <rect key="frame" x="0.0" y="208" width="393" height="45"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="TBx-rI-vCO"/>
+                                                </constraints>
                                                 <inset key="scrollIndicatorInsets" minX="14" minY="0.0" maxX="0.0" maxY="14"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ve9-pt-wWN">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -224,7 +227,6 @@
                             <constraint firstItem="CIb-tU-VeV" firstAttribute="trailing" secondItem="LMa-wZ-ckt" secondAttribute="trailing" id="Hwy-py-x2E"/>
                             <constraint firstAttribute="bottom" secondItem="LMa-wZ-ckt" secondAttribute="bottom" id="Lb8-Q8-cRR"/>
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="leading" secondItem="CIb-tU-VeV" secondAttribute="leading" id="Q8T-LM-rTc"/>
-                            <constraint firstItem="5oP-FE-Le0" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.053" id="an6-Tn-ea7"/>
                             <constraint firstItem="LMa-wZ-ckt" firstAttribute="top" secondItem="CIb-tU-VeV" secondAttribute="top" id="h2R-ae-tX3"/>
                             <constraint firstItem="SYu-N9-Tfv" firstAttribute="height" secondItem="RQ1-1E-uRb" secondAttribute="height" multiplier="0.41" id="tdD-h8-cG2"/>
                         </constraints>
