@@ -10,7 +10,7 @@ struct CoursesCategory {
     let name: String
     let courses: [Course]
 }
-struct Course {
+struct Course: Equatable {
     let id: Int
     let category: String
     let title: String
@@ -21,4 +21,7 @@ struct Course {
     let author: String
     let authorRole: String
     let authorImageUrl: String
+    public static func ==(lhs: Course, rhs: Course) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

@@ -15,11 +15,12 @@
 		CB649F7F2D9553870045534E /* FormSummaryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */; };
 		CB649F812D9558480045534E /* ErrorPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F802D9558480045534E /* ErrorPopupVC.swift */; };
 		CB649F8B2D955C700045534E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB649F8A2D955C700045534E /* Localizable.strings */; };
+		CB649F902D9564070045534E /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F8F2D9564070045534E /* HomeViewModelTests.swift */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
 		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
 		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
 		CBC05F002D929DD600386F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF62D929DD600386F14 /* Main.storyboard */; };
-		CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F012D929DF000386F14 /* MazaadyTests.swift */; };
+		CBC05F032D929DF000386F14 /* FormsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F012D929DF000386F14 /* FormsViewModelTests.swift */; };
 		CBC05F072D929DF400386F14 /* MazaadyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F042D929DF400386F14 /* MazaadyUITests.swift */; };
 		CBC05F082D929DF400386F14 /* MazaadyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */; };
 		CBC05F0A2D92A54800386F14 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05F092D92A54800386F14 /* SplashVC.swift */; };
@@ -85,6 +86,7 @@
 		CB649F8C2D955CBD0045534E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		CB649F8D2D955CBD0045534E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CB649F8E2D955CBD0045534E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB649F8F2D9564070045534E /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +95,7 @@
 		CBC05EF22D929DD600386F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC05EF32D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC05EF52D929DD600386F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CBC05F012D929DF000386F14 /* MazaadyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyTests.swift; sourceTree = "<group>"; };
+		CBC05F012D929DF000386F14 /* FormsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsViewModelTests.swift; sourceTree = "<group>"; };
 		CBC05F042D929DF400386F14 /* MazaadyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITests.swift; sourceTree = "<group>"; };
 		CBC05F052D929DF400386F14 /* MazaadyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazaadyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBC05F092D92A54800386F14 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -223,7 +225,8 @@
 		CBC05F022D929DF000386F14 /* MazaadyTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBC05F012D929DF000386F14 /* MazaadyTests.swift */,
+				CB649F8F2D9564070045534E /* HomeViewModelTests.swift */,
+				CBC05F012D929DF000386F14 /* FormsViewModelTests.swift */,
 			);
 			path = MazaadyTests;
 			sourceTree = "<group>";
@@ -678,7 +681,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC05F032D929DF000386F14 /* MazaadyTests.swift in Sources */,
+				CBC05F032D929DF000386F14 /* FormsViewModelTests.swift in Sources */,
+				CB649F902D9564070045534E /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

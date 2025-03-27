@@ -20,6 +20,7 @@ target 'Mazaady' do
   pod 'RxCocoa'
   pod 'AdvancedPageControl'
   pod 'IQKeyboardManagerSwift'
+  pod 'RxTest'
   end
 
   target 'MazaadyUITests' do

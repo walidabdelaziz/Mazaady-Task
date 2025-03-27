@@ -96,5 +96,4 @@ class FormsViewModel {
         }
         summaryItems.accept(items)
     }
-
 }
