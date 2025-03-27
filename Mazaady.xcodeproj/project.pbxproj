@@ -13,6 +13,7 @@
 		CB649F7B2D95520E0045534E /* FormSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F7A2D9552090045534E /* FormSummary.swift */; };
 		CB649F7E2D9553870045534E /* FormSummaryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB649F7D2D9553870045534E /* FormSummaryTVCell.xib */; };
 		CB649F7F2D9553870045534E /* FormSummaryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */; };
+		CB649F812D9558480045534E /* ErrorPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB649F802D9558480045534E /* ErrorPopupVC.swift */; };
 		CBC05EFA2D929DD600386F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC05EF02D929DD600386F14 /* AppDelegate.swift */; };
 		CBC05EFD2D929DD600386F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF12D929DD600386F14 /* Assets.xcassets */; };
 		CBC05EFF2D929DD600386F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC05EF42D929DD600386F14 /* LaunchScreen.storyboard */; };
@@ -78,6 +79,7 @@
 		CB649F7A2D9552090045534E /* FormSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSummary.swift; sourceTree = "<group>"; };
 		CB649F7C2D9553870045534E /* FormSummaryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSummaryTVCell.swift; sourceTree = "<group>"; };
 		CB649F7D2D9553870045534E /* FormSummaryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSummaryTVCell.xib; sourceTree = "<group>"; };
+		CB649F802D9558480045534E /* ErrorPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupVC.swift; sourceTree = "<group>"; };
 		CBC05EBC2D929DBB00386F14 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05ED22D929DBD00386F14 /* MazaadyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC05EDC2D929DBD00386F14 /* MazaadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazaadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		CB649F822D95584D0045534E /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				CB649F802D9558480045534E /* ErrorPopupVC.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
 		CBC05EB32D929DBB00386F14 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 				CBC05F182D92B59400386F14 /* Home */,
 				CBC05F922D9421CC00386F14 /* Forms */,
 				CBC05F952D9426AE00386F14 /* DropDown */,
+				CB649F822D95584D0045534E /* Popups */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -629,6 +640,7 @@
 				CBC05F122D92AB8800386F14 /* TabBarController.swift in Sources */,
 				CBC05FA62D9429FD00386F14 /* Categories.swift in Sources */,
 				CBC05FA02D94285000386F14 /* FormsViewModel.swift in Sources */,
+				CB649F812D9558480045534E /* ErrorPopupVC.swift in Sources */,
 				CBC05F1F2D92C0A900386F14 /* HomeViewModel.swift in Sources */,
 				CBC05F2D2D93958000386F14 /* CarouselFlowLayout.swift in Sources */,
 				CBC05FA82D942F0300386F14 /* SelectionManager.swift in Sources */,

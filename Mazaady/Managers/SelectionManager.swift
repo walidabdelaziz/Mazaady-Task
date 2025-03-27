@@ -25,4 +25,17 @@ class SelectionManager{
         DropDownVC.modalPresentationStyle = .overCurrentContext
         vc.present(DropDownVC, animated: true)
     }
+     func showAlert(_ errorMessage: String, vc: UIViewController){
+        vc.parent?.view.alpha = 0.3
+        let PopupStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let ErrorPopupVC = PopupStoryBoard.instantiateViewController(withIdentifier: "ErrorPopupVC") as! ErrorPopupVC
+        ErrorPopupVC.modalPresentationStyle = .overCurrentContext
+        ErrorPopupVC.message = errorMessage
+        ErrorPopupVC.onDismiss = {
+        vc.dismiss(animated: true) {
+                vc.parent?.view.alpha = 1
+            }
+        }
+        vc.present(ErrorPopupVC, animated: true, completion: nil)
+    }
 }

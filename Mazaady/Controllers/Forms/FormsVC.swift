@@ -147,7 +147,7 @@ class FormsVC: UIViewController {
     }
     private func handleSubCategorySelection() {
         if categoryTF.text?.isEmpty == true{
-            
+            SelectionManager.shared.showAlert("Please Select Category First", vc: self)
         }else{
             SelectionManager.shared.handleSelection(viewModel: formsViewModel, vc: self, type: .subCategory) {
                 [weak self] selectedData in

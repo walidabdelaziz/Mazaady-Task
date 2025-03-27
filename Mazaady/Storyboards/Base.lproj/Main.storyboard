@@ -710,7 +710,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aks-4G-AHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="2278"/>
+            <point key="canvasLocation" x="396" y="2271"/>
+        </scene>
+        <!--Error PopupVC-->
+        <scene sceneID="kFj-Qc-Z5M">
+            <objects>
+                <viewController storyboardIdentifier="ErrorPopupVC" id="MDo-MI-bNP" customClass="ErrorPopupVC" customModule="Mazaady" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vqe-Xk-Poo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koW-Jd-lph">
+                                <rect key="frame" x="18" y="383.33333333333331" width="357" height="85.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsz-X2-OTb">
+                                        <rect key="frame" x="16" y="32" width="325" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="rsz-X2-OTb" firstAttribute="leading" secondItem="koW-Jd-lph" secondAttribute="leading" constant="16" id="3RK-qF-764"/>
+                                    <constraint firstItem="rsz-X2-OTb" firstAttribute="top" secondItem="koW-Jd-lph" secondAttribute="top" constant="32" id="Adg-QL-bkC"/>
+                                    <constraint firstAttribute="trailing" secondItem="rsz-X2-OTb" secondAttribute="trailing" constant="16" id="LjO-mS-35D"/>
+                                    <constraint firstAttribute="bottom" secondItem="rsz-X2-OTb" secondAttribute="bottom" constant="32" id="cOJ-2G-D3p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7kY-OF-g6w"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="koW-Jd-lph" firstAttribute="leading" secondItem="7kY-OF-g6w" secondAttribute="leading" constant="18" id="09z-AS-Ypr"/>
+                            <constraint firstItem="7kY-OF-g6w" firstAttribute="trailing" secondItem="koW-Jd-lph" secondAttribute="trailing" constant="18" id="A8N-uq-XIe"/>
+                            <constraint firstItem="koW-Jd-lph" firstAttribute="centerY" secondItem="vqe-Xk-Poo" secondAttribute="centerY" id="bAp-Li-L8g"/>
+                            <constraint firstItem="koW-Jd-lph" firstAttribute="centerX" secondItem="vqe-Xk-Poo" secondAttribute="centerX" id="l1A-ek-J5z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgV" destination="koW-Jd-lph" id="9UW-uh-A4J"/>
+                        <outlet property="messageLbl" destination="rsz-X2-OTb" id="vH0-GR-NqT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gs-jA-1jy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="2270"/>
         </scene>
     </scenes>
     <resources>
